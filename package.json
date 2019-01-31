@@ -1,0 +1,25 @@
+{
+  "name": "myparcel-eslint",
+  "author": "Edie Lemoine",
+  "license": "ISC",
+  "version": "1.0.0",
+  "description": "ESlint configs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-meteor": "^5.1.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.1.0"
+  }
+}
