@@ -5,6 +5,7 @@ module.exports = {
   rules: {
     'array-bracket-newline': ['warn', 'consistent'],
     'array-bracket-spacing': ['warn', 'never'],
+    'array-element-newline': [ 'error', 'consistent' ],
     'arrow-parens': 'warn',
     'arrow-spacing': ['warn', {'before': true, 'after': true}],
     'block-spacing': 'warn',
@@ -79,18 +80,13 @@ module.exports = {
     'no-useless-return': 'warn',
     'no-var': 'warn',
     'no-whitespace-before-property': 'warn',
-    'object-curly-newline': [
-      'warn',
-      {
-        'ObjectExpression': {'multiline': true, 'consistent': true, 'minProperties': 4},
-        'ObjectPattern': {'multiline': true, 'minProperties': 4},
-        'ImportDeclaration': {'consistent': true, 'minProperties': 4},
-        'ExportDeclaration': 'never'
-      }
-    ],
+    'object-curly-newline': ['warn', {
+      'ObjectExpression': {'multiline': true, 'consistent': true, 'minProperties': 4},
+      'ObjectPattern': {'multiline': true, 'minProperties': 4},
+      'ImportDeclaration': {'consistent': true, 'minProperties': 4},
+      'ExportDeclaration': 'never'
+    }],
     'one-var': 'off',
-    'padded-blocks': ['warn', {'blocks': 'never', 'classes': 'always', 'switches': 'never'}],
-    // 'padding-line-between-statements': ['warn', {'blankLine': 'always', 'prev': '*', 'next': 'return'}],
     'prefer-const': 'warn',
     'prefer-destructuring': 'warn',
     'prefer-spread': 'warn',
@@ -102,13 +98,13 @@ module.exports = {
     'semi': ['warn', 'always'],
     'sort-imports': 'warn',
     'sort-keys': 'off',
-    'space-before-blocks': 'warn',
+    'space-before-blocks': ['warn', {'functions': 'never', 'keywords': 'always', 'classes': 'always'}],
     'space-before-function-paren': ['warn', 'never'],
     'space-infix-ops': 'warn',
     'space-unary-ops': ['warn', {'words': true, 'nonwords': false}],
     'spaced-comment': 'warn',
     'template-curly-spacing': 'warn',
     'wrap-regex': 'warn',
-    'yoda': ['warn', 'never']
+    'yoda': ['warn', 'never'],
   }
 };
