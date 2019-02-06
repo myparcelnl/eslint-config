@@ -98,7 +98,7 @@ module.exports = {
     'semi': ['warn', 'always'],
     'sort-imports': 'warn',
     'sort-keys': 'off',
-    'space-before-blocks': ['warn', {'functions': 'never', 'keywords': 'always', 'classes': 'always'}],
+    'space-before-blocks': ['warn', 'always'],
     'space-before-function-paren': ['warn', 'never'],
     'space-infix-ops': 'warn',
     'space-unary-ops': ['warn', {'words': true, 'nonwords': false}],
