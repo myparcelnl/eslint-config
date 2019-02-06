@@ -81,9 +81,9 @@ module.exports = {
     'no-var': 'warn',
     'no-whitespace-before-property': 'warn',
     'object-curly-newline': ['warn', {
-      'ObjectExpression': {'multiline': true, 'consistent': true, 'minProperties': 4},
-      'ObjectPattern': {'multiline': true, 'minProperties': 4},
-      'ImportDeclaration': {'consistent': true, 'minProperties': 4},
+      'ObjectExpression': {'multiline': true},
+      'ObjectPattern': {'multiline': true},
+      'ImportDeclaration': {'consistent': true},
       'ExportDeclaration': 'never'
     }],
     'one-var': 'off',
