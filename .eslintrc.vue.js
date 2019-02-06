@@ -17,6 +17,7 @@ module.exports = {
   ],
   rules: {
     'generator-star-spacing': 'off',
+    'id-length': ['warn', {'exceptions': ['i', 'h']}],
     'no-else-return': 'error',
     'no-extra-parens': ['error', 'all', {'nestedBinaryExpressions': false}],
     'object-curly-spacing': ['error', 'always'],
