@@ -2,6 +2,9 @@ module.exports = {
   env: {
     'browser': true
   },
+  extends: [
+    'eslint:recommended',
+  ],
   rules: {
     'array-bracket-newline': ['warn', 'consistent'],
     'array-bracket-spacing': ['warn', 'never'],

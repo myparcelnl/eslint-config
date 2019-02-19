@@ -1,11 +1,9 @@
 module.exports = {
   env: {
-    browser: true,
     node: true,
     meteor: true,
     jquery: true
   },
-  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module'
