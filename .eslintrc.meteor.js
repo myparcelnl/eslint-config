@@ -3,7 +3,6 @@ module.exports = {
     browser: true,
     node: true,
     meteor: true,
-    es6: true,
     jquery: true
   },
   parser: 'babel-eslint',
@@ -12,8 +11,7 @@ module.exports = {
     sourceType: 'module'
   },
   extends: [
-    './.eslintrc.js',
-    'eslint:recommended',
+    './.eslintrc.es6.js',
     'plugin:meteor/recommended'
   ],
   plugins: [
