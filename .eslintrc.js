@@ -24,7 +24,7 @@ module.exports = {
     'func-names': ['warn', 'as-needed'],
     'func-style': ['warn', 'declaration', {'allowArrowFunctions': true}],
     'function-paren-newline': ['warn', 'consistent'],
-    'id-length': ['warn', {'exceptions': ['i']}],
+    'id-length': ['warn', {'exceptions': ['i', 'e']}],
     'implicit-arrow-linebreak': ['warn', 'beside'],
     'indent': ['warn', 2],
     'init-declarations': 'off',
