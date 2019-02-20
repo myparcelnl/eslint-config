@@ -36,7 +36,7 @@ module.exports = {
     'max-lines-per-function': ['warn', 50],
     'max-params': ['warn', 4],
     'new-cap': ['warn', {'capIsNewExceptions': ['TemplateController']}],
-    'newline-per-chained-call': ['warn', {'ignoreChainWithDepth': 2}],
+    'newline-per-chained-call': 'off',
     'no-array-constructor': 'warn',
     'no-async-promise-executor': 'warn',
     'no-bitwise': 'off',
