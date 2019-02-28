@@ -26,7 +26,7 @@ module.exports = {
     'function-paren-newline': ['warn', 'consistent'],
     'id-length': ['warn', {'exceptions': ['i', 'e']}],
     'implicit-arrow-linebreak': ['warn', 'beside'],
-    'indent': ['warn', 2],
+    'indent': ['warn', 2, {'SwitchCase': 1}],
     'init-declarations': 'off',
     'key-spacing': 'warn',
     'keyword-spacing': ['warn', {'before': true, 'after': true}],
