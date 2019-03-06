@@ -85,7 +85,7 @@ module.exports = {
       'ExportDeclaration': 'never'
     }],
     'one-var': 'off',
-    'quote-props': ['warn', 'consistent-as-needed'],
+    'quote-props': ['warn', 'as-needed'],
     'quotes': ['warn', 'single'],
     'radix': 'off',
     'require-await': 'warn',
@@ -93,7 +93,6 @@ module.exports = {
     'sort-keys': 'off',
     'space-before-blocks': ['warn', 'always'],
     'space-before-function-paren': ['warn', 'never'],
-    'space-in-brackets': ['warn', 'never'],
     'space-in-parens': ['warn', 'never'],
     'space-infix-ops': 'warn',
     'space-unary-ops': ['warn', {'words': true, 'nonwords': false}],
