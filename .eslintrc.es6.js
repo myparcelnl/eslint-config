@@ -5,6 +5,10 @@ module.exports = {
   extends: [
     './.eslintrc.js',
   ],
+  parserOptions: {
+    ecmaVersion: 2019,
+    sourceType: 'module',
+  },
   rules: {
     'arrow-parens': 'warn',
     'arrow-spacing': ['warn', {'before': true, 'after': true}],
@@ -20,5 +24,5 @@ module.exports = {
     'prefer-template': 'warn',
     'sort-imports': 'warn',
     'template-curly-spacing': 'warn',
-  }
+  },
 };
