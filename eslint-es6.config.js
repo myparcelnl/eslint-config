@@ -3,7 +3,7 @@ module.exports = {
     es6: true,
   },
   extends: [
-    './.eslintrc.js',
+    './eslint.config.js',
   ],
   parserOptions: {
     ecmaVersion: 2019,

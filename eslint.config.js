@@ -4,6 +4,7 @@ module.exports = {
     'browser': true
   },
   extends: [
+    './eslint-jsdoc.config.js',
     'eslint:recommended',
   ],
   rules: {

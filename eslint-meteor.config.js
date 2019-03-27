@@ -9,7 +9,7 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
-    './.eslintrc.es6.js',
+    './eslint-es6.config.js',
     'plugin:meteor/recommended',
   ],
   plugins: [

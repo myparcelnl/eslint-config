@@ -4,7 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    './.eslintrc.es6.js',
+    './eslint-es6.config.js',
     'plugin:vue/recommended',
   ],
   plugins: [
