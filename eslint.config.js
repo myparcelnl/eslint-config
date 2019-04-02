@@ -1,7 +1,7 @@
 module.exports = {
   parser: 'babel-eslint',
   env: {
-    'browser': true
+    'browser': true,
   },
   extends: [
     './eslint-jsdoc.config.js',
@@ -35,7 +35,7 @@ module.exports = {
     'linebreak-style': ['warn', 'unix'],
     'lines-between-class-members': ['warn', 'always', {'exceptAfterSingleLine': true}],
     'max-len': ['warn', 120],
-    'max-lines-per-function': ['warn', 50],
+    'max-lines-per-function': ['warn', {'max': 50, 'skipComments': true}],
     'max-params': ['warn', 4],
     'new-cap': ['warn', {'capIsNewExceptions': ['TemplateController']}],
     'newline-per-chained-call': 'off',
@@ -79,12 +79,14 @@ module.exports = {
     'no-useless-escape': 'warn',
     'no-useless-return': 'warn',
     'no-whitespace-before-property': 'warn',
-    'object-curly-newline': ['warn', {
-      'ObjectExpression': {'consistent': true},
-      'ObjectPattern': {'consistent': true},
-      'ImportDeclaration': {'consistent': true},
-      'ExportDeclaration': 'never'
-    }],
+    'object-curly-newline': [
+      'warn', {
+        'ObjectExpression': {'consistent': true},
+        'ObjectPattern': {'consistent': true},
+        'ImportDeclaration': {'consistent': true},
+        'ExportDeclaration': 'never',
+      },
+    ],
     'one-var': 'off',
     'quote-props': ['warn', 'as-needed'],
     'quotes': ['warn', 'single'],
@@ -100,5 +102,5 @@ module.exports = {
     'spaced-comment': 'warn',
     'wrap-regex': 'warn',
     'yoda': ['warn', 'never'],
-  }
+  },
 };
