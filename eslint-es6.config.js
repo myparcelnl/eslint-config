@@ -1,14 +1,14 @@
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
   env: {
     es6: true,
   },
   extends: [
     './eslint.config.js',
   ],
-  parserOptions: {
-    ecmaVersion: 2019,
-    sourceType: 'module',
-  },
   rules: {
     'arrow-parens': 'warn',
     'arrow-spacing': ['warn', {'before': true, 'after': true}],

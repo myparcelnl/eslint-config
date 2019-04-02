@@ -81,12 +81,17 @@ This config is made for [Meteor] projects. In addition to the base config it ext
 This config is made for [Vue.js] projects. In addition to the base config it extends `plugin:vue/recommended`. It supports linting `.vue` files by using [eslint-plugin-vue].
 
 ## Plugin configs
-These configs are not meant to be used on their own.
+These configs are meant to be extended by other configs to add functionality, not to be used on their own.
 
 ### JSDoc
 > `eslint-jsdoc.config.js`
 
 Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its custom rules.
+
+### Jest
+> `eslint-jest.config.js`
+
+Not extended by any config right now, you can extend it in a project using Jest. Contains rules from [eslint-plugin-jest].
 
 [environments]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 [globals]: https://eslint.org/docs/user-guide/configuring#specifying-globals
@@ -94,4 +99,5 @@ Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its cust
 [Meteor]: https://www.meteor.com/
 [Vue.js]: https://vuejs.org/
 [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
-[eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc#eslint-plugin-jsdoc-installation
+[eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
+[eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest

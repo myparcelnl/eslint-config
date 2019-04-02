@@ -17,6 +17,7 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-html": "^5.0.3",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-jsdoc": "^4.5.0",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-meteor": "^5.1.0",

@@ -10,11 +10,11 @@ module.exports = {
   },
   extends: [
     './eslint-es6.config.js',
+    './eslint-html.config.js',
     'plugin:meteor/recommended',
   ],
   plugins: [
     'meteor',
-    'template',
   ],
   globals: {
     ReactiveVar: false,

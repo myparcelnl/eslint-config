@@ -1,6 +1,14 @@
 module.exports = {
   plugins: ['jsdoc'],
+  settings: {
+    jsdoc: {
+      tagNamePreference: {
+        returns: 'return',
+      },
+    },
+  },
   rules: {
+    'valid-jsdoc': 1,
     'jsdoc/check-examples': 1,
     'jsdoc/check-param-names': 1,
     'jsdoc/check-tag-names': 1,
