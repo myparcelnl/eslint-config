@@ -10,7 +10,6 @@ module.exports = {
   },
   extends: [
     './eslint-es6.config.js',
-    './eslint-html.config.js',
     'plugin:meteor/recommended',
   ],
   plugins: [
@@ -21,5 +20,8 @@ module.exports = {
     TemplateController: false,
     Tracker: false,
     FlowRouter: false,
+  },
+  rules: {
+    'new-cap': ['warn', {capIsNewExceptions: ['TemplateController', 'Validation', 'Events', 'Data']}],
   },
 };
