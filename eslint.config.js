@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     './eslint-jsdoc.config.js',
-    'eslint:recommended',
+    './eslint-you-dont-need-momentjs.config.js',
   ],
   rules: {
     'array-bracket-newline': ['warn', 'consistent'],
@@ -45,6 +45,7 @@ module.exports = {
     'no-console': 'warn',
     'no-continue': 'off',
     'no-compare-neg-zero': 'warn',
+    'no-fallthrough': 'warn',
     'no-inline-comments': 'off',
     'no-lonely-if': 'warn',
     'no-magic-numbers': ['warn', {'ignore': [0, 1, 100], 'detectObjects': true, 'enforceConst': true}],
