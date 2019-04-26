@@ -1,0 +1,11 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "./eslint.config.js"
+  ],
+  "rules": {
+    "quote-props": ["error", "consistent"]
+  }
+}

@@ -12,7 +12,7 @@ module.exports = {
   ],
   rules: {
     'generator-star-spacing': 'off',
-    'id-length': ['warn', {'exceptions': ['i', 'h']}],
+    'id-length': ['warn', {'exceptions': ['i', 'h', 'e']}],
     'no-else-return': 'warn',
     'no-extra-parens': ['warn', 'all', {'nestedBinaryExpressions': false}],
     'object-curly-spacing': ['warn', 'always'],
