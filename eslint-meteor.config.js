@@ -5,7 +5,7 @@ module.exports = {
     jquery: true,
   },
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2018,
     sourceType: 'module',
   },
   extends: [
@@ -23,5 +23,6 @@ module.exports = {
   },
   rules: {
     'new-cap': ['warn', {capIsNewExceptions: ['TemplateController', 'Validation', 'Events', 'Data']}],
+    'no-underscore-dangle': ['warn', {allow: ['_uihooks', '_laq']}],
   },
 };
