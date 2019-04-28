@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    'you-dont-need-momentjs'
+    'you-dont-need-momentjs',
   ],
   rules: {
     // Needs to be kept up to date with:

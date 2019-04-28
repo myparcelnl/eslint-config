@@ -4,10 +4,6 @@ module.exports = {
     meteor: true,
     jquery: true,
   },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
   extends: [
     './eslint-es6.config.js',
     'plugin:meteor/recommended',

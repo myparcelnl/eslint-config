@@ -1,8 +1,7 @@
+const {defaultParserOptions} = require('./exports');
+
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
+  ...defaultParserOptions,
   env: {
     es6: true,
   },
