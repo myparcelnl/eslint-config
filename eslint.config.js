@@ -88,6 +88,7 @@ module.exports = {
         'ExportDeclaration': 'never',
       },
     ],
+    'object-curly-spacing': ['warn', 'never'],
     'one-var': 'off',
     'quote-props': ['warn', 'as-needed'],
     'quotes': ['warn', 'single'],

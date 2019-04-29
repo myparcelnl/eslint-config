@@ -9,6 +9,7 @@
     "quote-props": [
       "error",
       "consistent"
-    ]
+    ],
+    "no-magic-numbers": "off"
   }
 }
