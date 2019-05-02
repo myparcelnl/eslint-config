@@ -7,6 +7,7 @@ module.exports = {
   },
   extends: [
     './eslint.config.js',
+    './eslint-babel.config.js',
   ],
   rules: {
     'arrow-parens': 'warn',
