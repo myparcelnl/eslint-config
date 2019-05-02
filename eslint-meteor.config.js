@@ -18,7 +18,7 @@ module.exports = {
     FlowRouter: false,
   },
   rules: {
-    'new-cap': ['warn', {capIsNewExceptions: ['TemplateController', 'Validation', 'Events', 'Data']}],
+    'babel/new-cap': ['warn', {capIsNewExceptions: ['TemplateController', 'Validation', 'Events', 'Data']}],
     'no-underscore-dangle': ['warn', {allow: ['_uihooks', '_laq']}],
   },
 };

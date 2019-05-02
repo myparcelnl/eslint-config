@@ -1,12 +1,5 @@
 module.exports = {
   plugins: ['jsdoc'],
-  settings: {
-    jsdoc: {
-      tagNamePreference: {
-        returns: 'return',
-      },
-    },
-  },
   rules: {
     'jsdoc/check-alignment': 'warn',
     'jsdoc/check-indentation': 'warn',
