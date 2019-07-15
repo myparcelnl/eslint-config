@@ -65,6 +65,11 @@ If there's anything missing ([globals], [environments], [rules] etc.) please add
 
 This config contains the bare bones setup. It extends plugin configs that should be used in every project and contains all base rules. Every other config should extend this one.
 
+### ES5
+> `eslint-es5.config.js`
+
+This config is made for any project using ES5 JavaScript. The environment `es5` is set and it extends the base config.
+
 ### ES6
 > `eslint-es6.config.js`
 
@@ -91,7 +96,12 @@ Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its cust
 ### Jest
 > `eslint-jest.config.js`
 
-Not extended by any config right now, you can extend it in a project using Jest. Contains rules from [eslint-plugin-jest].
+Extend this config in any project using Jest. Contains rules from [eslint-plugin-jest].
+
+### JSDoc
+> `eslint-you-dont-need-momentjs.config.js`
+
+Contains [eslint-plugin-you-dont-need-momentjs] and applies its custom rules.
 
 [environments]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 [globals]: https://eslint.org/docs/user-guide/configuring#specifying-globals
@@ -101,3 +111,4 @@ Not extended by any config right now, you can extend it in a project using Jest.
 [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
 [eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest
+[eslint-plugin-you-dont-need-momentjs]: https://www.npmjs.com/package/eslint-plugin-you-dont-need-momentjs
