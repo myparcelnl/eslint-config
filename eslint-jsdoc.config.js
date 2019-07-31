@@ -1,8 +1,17 @@
 module.exports = {
   plugins: ['jsdoc'],
+  settings: {
+    jsdoc: {
+      preferredTypes: {
+        array: 'Array',
+        string: 'String',
+        number: 'Number',
+      },
+    },
+  },
   rules: {
     'jsdoc/check-alignment': 'warn',
-    'jsdoc/check-indentation': 'warn',
+    'jsdoc/check-indentation': 'off',
     'jsdoc/check-syntax': 'warn',
     'jsdoc/newline-after-description': 'warn',
     'jsdoc/no-undefined-types': 'warn',
