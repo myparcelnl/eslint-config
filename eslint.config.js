@@ -225,10 +225,9 @@ module.exports = {
     'radix': 'off',
     'require-atomic-updates': 'off',
     'require-await': 'warn',
-    'require-jsdoc': 'off', // deprecated
     'require-unicode-regexp': 'off',
-    'semi-spacing': 'off',
-    'semi-style': 'off',
+    'semi-spacing': 'warn',
+    'semi-style': ['warn', 'last'],
     'sort-keys': 'off',
     'sort-vars': 'off',
     'space-before-blocks': ['warn', 'always'],
@@ -247,5 +246,12 @@ module.exports = {
     'wrap-iife': 'off',
     'wrap-regex': 'warn',
     'yoda': ['warn', 'never'],
+
+    // These will be overridden with babel/ equivalents if eslint-babel.config.js is included.
+    'new-cap': ['warn'],
+    'no-unused-expressions': 'warn',
+    'object-curly-spacing': ['warn', 'never'],
+    'quotes': ['warn', 'single'],
+    'semi': ['warn', 'always'],
   },
 };
