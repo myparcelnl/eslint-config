@@ -1,14 +1,12 @@
 {
-  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "env": {
     "node": true
   },
   "extends": [
-    "./eslint.config.js"
+    "./index.js"
   ],
   "rules": {
     "quote-props": [

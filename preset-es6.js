@@ -1,15 +1,15 @@
 module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   env: {
     es6: true,
   },
   extends: [
-    './eslint.config.js',
-    './eslint-babel.config.js',
+    './preset-default.js',
+    './plugin-babel.js',
   ],
   rules: {
     'func-names': ['warn', 'as-needed'],

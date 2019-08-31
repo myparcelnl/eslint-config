@@ -1,3 +1,3 @@
 module.exports = {
-  extends: './eslint.config.js',
+  extends: './preset-default.js',
 };

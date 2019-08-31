@@ -6,7 +6,7 @@ module.exports = {
     'es5',
   ],
   extends: [
-    './eslint.config.js',
+    './preset-default.js',
     'plugin:es5/no-es2015',
   ],
 };

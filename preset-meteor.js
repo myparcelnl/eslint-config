@@ -5,7 +5,7 @@ module.exports = {
     jquery: true,
   },
   extends: [
-    './eslint-es6.config.js',
+    './preset-es6.js',
     'plugin:meteor/recommended',
   ],
   plugins: [

@@ -3,8 +3,8 @@ module.exports = {
     browser: true,
   },
   extends: [
-    './eslint-jsdoc.config.js',
-    './eslint-you-dont-need-momentjs.config.js',
+    './plugin-jsdoc.js',
+    './plugin-you-dont-need-momentjs.js',
   ],
   rules: {
     'accessor-pairs': 'off',
@@ -246,7 +246,7 @@ module.exports = {
     'wrap-regex': 'warn',
     'yoda': ['warn', 'never'],
 
-    // These will be overridden with babel/ equivalents if eslint-babel.config.js is included.
+    // These will be overridden with babel/ equivalents if plugin-babel.js is included.
     'new-cap': ['warn'],
     'no-unused-expressions': 'warn',
     'object-curly-spacing': ['warn', 'never'],
