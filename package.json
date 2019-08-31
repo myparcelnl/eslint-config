@@ -1,11 +1,11 @@
 {
-  "name": "@myparcel/eslint",
+  "name": "@myparcel/eslint-config",
   "author": "Edie Lemoine",
   "license": "ISC",
   "version": "1.0.0",
-  "description": "ESLint configs",
+  "description": "ESLint configurations for various types of projects.",
   "dependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "eslint": "^5.14.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-friendly-formatter": "^4.0.1",
@@ -14,7 +14,7 @@
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.13.0",
-    "eslint-plugin-jsdoc": "^15.8.0",
+    "eslint-plugin-jsdoc": "^15.8.3",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-meteor": "^6.0.0",
     "eslint-plugin-node": "^9.1.0",
@@ -23,5 +23,10 @@
     "eslint-plugin-template": "^0.3.2",
     "eslint-plugin-vue": "^5.2.3",
     "eslint-plugin-you-dont-need-momentjs": "^1.5.0"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
