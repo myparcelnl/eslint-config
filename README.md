@@ -2,13 +2,12 @@
 This package contains multiple ESLint presets for different types of projects. Additional information, documentation and guides on ESLint can be found on https://eslint.org/ 
 
 ## Usage
-
 Install the package via npm:
 ```
 $ npm i -D @myparcel/eslint-config
 ```
 
-Create an [ESLint config file], if you haven't already, and add the following:
+Create an [ESLint config file], if you haven't already, and add the following: (JavaScript example)
 ```js
 module.exports = {
   extends: [

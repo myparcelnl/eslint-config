@@ -1,8 +1,8 @@
 {
   "name": "@myparcel/eslint-config",
-  "author": "Edie Lemoine",
+  "author": "Edie Lemoine (edie@myparcel.nl)",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint configurations for various types of projects.",
   "dependencies": {
     "babel-eslint": "^10.0.3",

@@ -43,13 +43,7 @@ module.exports = {
     'handle-callback-err': 'off',
     'id-blacklist': 'off',
     'id-length': ['warn', {'exceptions': ['$', '_', 'i', 'e', 'a', 'b', 'x', 'y', 'z']}],
-    'id-match': [
-      'warn',
-      '^[A-Z]?[a-z]+([A-Z][a-z]*)*$',
-      {
-        'ignoreDestructuring': true,
-      },
-    ],
+    'id-match': 'off',
     'implicit-arrow-linebreak': ['warn', 'beside'],
     'indent': ['warn', 2, {'SwitchCase': 1}],
     'indent-legacy': 'off',
