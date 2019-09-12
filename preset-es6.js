@@ -13,6 +13,11 @@ module.exports = {
   ],
   rules: {
     'func-names': ['warn', 'as-needed'],
+    'no-magic-numbers': ['warn', {
+      ignore: [-1, 0, 1, 100],
+      detectObjects: true,
+      enforceConst: true,
+    }],
 
     // ES6 only
     'arrow-body-style': 'off',

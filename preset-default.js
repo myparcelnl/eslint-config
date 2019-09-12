@@ -122,7 +122,10 @@ module.exports = {
     'no-lone-blocks': 'off',
     'no-lonely-if': 'warn',
     'no-loop-func': 'off',
-    'no-magic-numbers': ['warn', {'ignore': [-1, 0, 1, 100], 'detectObjects': true, 'enforceConst': true}],
+    'no-magic-numbers': ['warn', {
+      'ignore': [-1, 0, 1, 100],
+      'detectObjects': true,
+    }],
     'no-misleading-character-class': 'off',
     'no-mixed-operators': 'warn',
     'no-mixed-requires': 'off',
