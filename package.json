@@ -1,11 +1,13 @@
 {
   "name": "@myparcel/eslint-config",
-  "author": "Edie Lemoine",
+  "author": "Edie Lemoine (edie@myparcel.nl)",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "ESLint configurations for various types of projects.",
+  "scripts": {
+    "lint": "eslint --fix ./*.js"
+  },
   "dependencies": {
-    "babel-eslint": "^10.0.3",
     "eslint": "^5.14.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-friendly-formatter": "^4.0.1",
@@ -25,8 +27,18 @@
     "eslint-plugin-you-dont-need-momentjs": "^1.5.0"
   },
   "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "devDependencies": {
+    "husky": "^3.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myparcelnl/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/myparcelnl/eslint-config/issues"
+  },
+  "homepage": "https://github.com/myparcelnl/eslint-config#readme",
+  "keywords": [
+    "eslint"
+  ]
 }

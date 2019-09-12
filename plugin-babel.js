@@ -3,6 +3,7 @@ module.exports = {
     'babel',
   ],
   rules: {
+    // Turn off the settings eslint-plugin-babel replaces.
     'new-cap': 'off',
     'no-unused-expressions': 'off',
     'object-curly-spacing': 'off',

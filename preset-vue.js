@@ -3,7 +3,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    './eslint-es6.config.js',
+    './preset-es6.js',
     'plugin:vue/recommended',
   ],
   plugins: [
