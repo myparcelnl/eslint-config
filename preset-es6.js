@@ -1,5 +1,4 @@
 module.exports = {
-  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -12,6 +11,7 @@ module.exports = {
     './plugin-babel.js',
   ],
   rules: {
+    // Default overrides
     'func-names': ['warn', 'as-needed'],
     'no-magic-numbers': ['warn', {
       ignore: [-1, 0, 1, 100],
@@ -19,12 +19,17 @@ module.exports = {
       enforceConst: true,
     }],
 
-    // ES6 only
+    // ES6+ only
     'arrow-body-style': 'off',
     'arrow-parens': 'warn',
-    'arrow-spacing': ['warn', {'before': true, 'after': true}],
+    'arrow-spacing': ['warn', {
+      'before': true,
+      'after': true,
+    }],
     'constructor-super': 'off',
     'generator-star-spacing': 'off',
+    'no-async-promise-executor': 'warn',
+    'no-await-in-loop': 'off',
     'no-class-assign': 'off',
     'no-confusing-arrow': 'warn',
     'no-const-assign': 'warn',
@@ -32,6 +37,7 @@ module.exports = {
     'no-duplicate-imports': 'warn',
     'no-new-symbol': 'off',
     'no-restricted-imports': 'off',
+    'no-return-await': 'warn',
     'no-this-before-super': 'off',
     'no-useless-computed-key': 'off',
     'no-useless-constructor': 'off',
@@ -40,11 +46,15 @@ module.exports = {
     'object-shorthand': 'off',
     'prefer-arrow-callback': 'off',
     'prefer-const': 'warn',
-    'prefer-destructuring': ['warn', {'array': false, 'object': true}],
+    'prefer-destructuring': ['warn', {
+      array: false,
+      object: true,
+    }],
     'prefer-numeric-literals': 'off',
     'prefer-rest-params': 'off',
     'prefer-spread': 'warn',
     'prefer-template': 'warn',
+    'require-await': 'warn',
     'require-yield': 'off',
     'rest-spread-spacing': 'off',
     'sort-imports': 'warn',
