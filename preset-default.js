@@ -3,8 +3,8 @@ module.exports = {
     browser: true,
   },
   extends: [
-    './eslint-jsdoc.config.js',
-    './eslint-you-dont-need-momentjs.config.js',
+    './plugin-jsdoc.js',
+    './plugin-you-dont-need-momentjs.js',
   ],
   rules: {
     'accessor-pairs': 'off',
@@ -19,7 +19,10 @@ module.exports = {
     'capitalized-comments': 'off',
     'class-methods-use-this': 'off',
     'comma-dangle': ['warn', 'always-multiline'],
-    'comma-spacing': ['warn', {'before': false, 'after': true}],
+    'comma-spacing': ['warn', {
+      'before': false,
+      'after': true,
+    }],
     'comma-style': 'warn',
     'complexity': 'off',
     'computed-property-spacing': ['warn', 'never'],
@@ -43,20 +46,17 @@ module.exports = {
     'handle-callback-err': 'off',
     'id-blacklist': 'off',
     'id-length': ['warn', {'exceptions': ['$', '_', 'i', 'e', 'a', 'b', 'x', 'y', 'z']}],
-    'id-match': [
-      'warn',
-      '^[A-Z]?[a-z]+([A-Z][a-z]*)*$',
-      {
-        'ignoreDestructuring': true,
-      },
-    ],
+    'id-match': 'off',
     'implicit-arrow-linebreak': ['warn', 'beside'],
     'indent': ['warn', 2, {'SwitchCase': 1}],
     'indent-legacy': 'off',
     'init-declarations': 'off',
     'jsx-quotes': 'off',
     'key-spacing': 'warn',
-    'keyword-spacing': ['warn', {'before': true, 'after': true}],
+    'keyword-spacing': ['warn', {
+      'before': true,
+      'after': true,
+    }],
     'line-comment-position': 'off',
     'linebreak-style': ['warn', 'unix'],
     'lines-around-comment': 'off',
@@ -66,7 +66,10 @@ module.exports = {
     'max-depth': 'off',
     'max-len': ['warn', 120],
     'max-lines': 'off',
-    'max-lines-per-function': ['warn', {'max': 50, 'skipComments': true}],
+    'max-lines-per-function': ['warn', {
+      'max': 50,
+      'skipComments': true,
+    }],
     'max-nested-callbacks': 'off',
     'max-params': ['warn', 4],
     'max-statements': 'off',
@@ -79,8 +82,6 @@ module.exports = {
     'newline-per-chained-call': 'off',
     'no-alert': 'off',
     'no-array-constructor': 'warn',
-    'no-async-promise-executor': 'warn',
-    'no-await-in-loop': 'off',
     'no-bitwise': 'off',
     'no-buffer-constructor': 'off',
     'no-caller': 'off',
@@ -128,7 +129,10 @@ module.exports = {
     'no-lone-blocks': 'off',
     'no-lonely-if': 'warn',
     'no-loop-func': 'off',
-    'no-magic-numbers': ['warn', {'ignore': [-1, 0, 1, 100], 'detectObjects': true, 'enforceConst': true}],
+    'no-magic-numbers': ['warn', {
+      'ignore': [-1, 0, 1, 100],
+      'detectObjects': true,
+    }],
     'no-misleading-character-class': 'off',
     'no-mixed-operators': 'warn',
     'no-mixed-requires': 'off',
@@ -136,7 +140,10 @@ module.exports = {
     'no-multi-assign': 'warn',
     'no-multi-spaces': 'warn',
     'no-multi-str': 'off',
-    'no-multiple-empty-lines': ['warn', {'max': 1, 'maxBOF': 0}],
+    'no-multiple-empty-lines': ['warn', {
+      'max': 1,
+      'maxBOF': 0,
+    }],
     'no-native-reassign': 'off',
     'no-negated-condition': 'warn',
     'no-negated-in-lhs': 'off',
@@ -163,7 +170,6 @@ module.exports = {
     'no-restricted-properties': 'off',
     'no-restricted-syntax': 'off',
     'no-return-assign': 'warn',
-    'no-return-await': 'warn',
     'no-script-url': 'off',
     'no-self-assign': 'off',
     'no-self-compare': 'off',
@@ -202,8 +208,7 @@ module.exports = {
     'no-with': 'off',
     'nonblock-statement-body-position': 'off',
     'object-curly-newline': [
-      'warn',
-      {
+      'warn', {
         'ObjectExpression': {'consistent': true},
         'ObjectPattern': {'consistent': true},
         'ImportDeclaration': {'consistent': true},
@@ -224,7 +229,6 @@ module.exports = {
     'quote-props': ['warn', 'as-needed'],
     'radix': 'off',
     'require-atomic-updates': 'off',
-    'require-await': 'warn',
     'require-unicode-regexp': 'off',
     'semi-spacing': 'warn',
     'semi-style': ['warn', 'last'],
@@ -234,7 +238,10 @@ module.exports = {
     'space-before-function-paren': ['warn', 'never'],
     'space-in-parens': ['warn', 'never'],
     'space-infix-ops': 'warn',
-    'space-unary-ops': ['warn', {'words': true, 'nonwords': false}],
+    'space-unary-ops': ['warn', {
+      'words': true,
+      'nonwords': false,
+    }],
     'spaced-comment': ['warn', 'always', {'markers': ['/']}],
     'strict': 'off',
     'switch-colon-spacing': 'warn',
@@ -246,7 +253,7 @@ module.exports = {
     'wrap-regex': 'warn',
     'yoda': ['warn', 'never'],
 
-    // These will be overridden with babel/ equivalents if eslint-babel.config.js is included.
+    // These will be overridden with babel/ equivalents if plugin-babel.js is included.
     'new-cap': ['warn'],
     'no-unused-expressions': 'warn',
     'object-curly-spacing': ['warn', 'never'],

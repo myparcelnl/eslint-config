@@ -1,114 +1,92 @@
-# MyParcel ESlint
-This package contains multiple ESlint presets for different types of projects. Additional information, documentation and guides on ESLint can be found on https://eslint.org/ 
-
-## Contents
-* [Usage](#usage)
-  + [Adding the repository](#adding-the-repository)
-  + [Using this module](#using-this-module)
-  + [Enabling linting in PhpStorm](#enabling-linting-in-phpstorm)
-* [Configs](#configs)
-  + [Meteor](#meteor)
-  + [Vue](#vue)
+# MyParcel ESLint
+This package contains multiple ESLint presets for different types of projects. Additional information, documentation and guides on ESLint can be found on https://eslint.org/ 
 
 ## Usage
-This module is meant to be used by including this repository as a submodule of the repository you want to use this in. If it's already included you can skip to [Using this module](#using-this-module). 
-
-### Adding the repository
-Add the repository to submodules in a different repository and initialize contents:
-```bash
-git submodule add ssh://git@git.dmp.zone:7999/myp/dmp-standards.git
-git submodule update
+Install the package via npm:
+```
+$ npm i -D @myparcel/eslint-config
 ```
 
-### Using this module
- In your project's `package.json` add `@myparcel/eslint` to the dev dependencies as follows:
- 
- ```
-"@myparcel/eslint": "file:../dmp-standards/eslint"
-```
-And run `npm install` to install the module to `node_modules/myparcel/eslint` and install the module's dependencies.
-
-Create a file named `eslint.config.js` and extend **one** of the configs in this module.
+Create an [ESLint config file], if you haven't already, and add the following: (JavaScript example)
 ```js
 module.exports = {
   extends: [
-    // Base config
-    './node_modules/myparcel/eslint/eslint.config.js',
-    // ES6 config
-    '<Path to this dir>/eslint-es6.config.js',
-    // Meteor config
-    '<Path to this dir>/eslint-meteor.config.js',
-    // Vue config
-    '<Path to this dir>/eslint-vue.config.js',
-    // ...etc
-  ]
+    // Base config, same as '@myparcel/eslint-config/preset-default',
+    '@myparcel/eslint-config',
+  ],
 };
 ```
-[Read more about configs here](#configs)
+Or to use another preset with an extra plugin:    
+```js
+module.exports = {
+  extends: [
+    // Vue.js config
+    '@myparcel/eslint-config/preset-vue',  
+    '@myparcel/eslint-config/plugin-you-dont-need-momentjs',  
+  ],
+};
+```    
+Be sure you only use one preset at a time. You can use multiple plugins, though.
 
-### Enabling linting in PhpStorm
-1. Enable ESlint in `Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint`
-2. Set `ESLint package` to the local eslint in your project's `node_modules`
-3. Set `Configuration file` to the `eslint.config.js` in your project
+## Presets
+These are the presets for various types of projects. They are named `plugin-<name>.js`. All presets (eventually) extend the base config `preset-default.js`. 
 
-Done!
-
-You can verify it works by opening a file and looking for errors or warnings from ESLint. Press `Option + Enter` (or whatever shortcut you have set for `Intention Actions`) or click the intention actions button/lightbulb that appears. Press `Fix ESLint problems` to attempt to autofix all errors and warnings in the current file. You can also use the Intention Actions to only fix the highlighted error/warning.
-
-## Configs
-All configs extend the base config `eslint.config.js`. Try to create a new preset (if possible) for your project instead of using the base so it can be reused. The base config enforces a lot of basic syntax rules like whitespace and punctuation. Please avoid overriding these rules!
+Try to to create a new preset (if possible) for your project instead of using the base and adding/overriding tons of rules so it can be reused. The base config enforces a lot of basic syntax rules like whitespace and punctuation. Please avoid overriding these rules where possible!
 
 If there's anything missing ([globals], [environments], [rules] etc.) please add them in this repository and create a pull request instead of adding them in your project configuration. If it's truly project specific you don't have to do this.
 
 ### Base config 
-> `eslint.config.js`
+> `@myparcel/eslint-config(/preset-default)`
 
-This config contains the bare bones setup. It extends plugin configs that should be used in every project and contains all base rules. Every other config should extend this one.
+This config contains the bare bones setup. It extends plugin configs that should be used in every project and contains all base rules. All other presets should extend this one.
 
 ### ES5
-> `eslint-es5.config.js`
+> `@myparcel/eslint-config/preset-es5`
 
 This config is made for any project using ES5 JavaScript. The environment `es5` is set and it extends the base config.
 
 ### ES6
-> `eslint-es6.config.js`
+> `@myparcel/eslint-config/preset-es6`
 
-This config is made for any project using modern JavaScript. It's meant to always use the latest ECMAScript version. The environment `es6` is set and it extends the base config.
+This config is made as a base for any project using modern JavaScript. It's meant to always use the latest ECMAScript version. The environment `es6` is set and it extends the base config.
 
 ### Meteor 
-> `eslint-meteor.config.js`
+> `@myparcel/eslint-config/preset-meteor`
 
 This config is made for [Meteor] projects. In addition to the base config it extends `eslint:recommended` and `plugin:meteor/recommended`. The needed [environments] are already set and it adds some more [globals] from Meteor modules. 
 
 ### Vue
-> `eslint-vue.config.js`
+> `@myparcel/eslint-config/preset-vue`
 
 This config is made for [Vue.js] projects. In addition to the base config it extends `plugin:vue/recommended`. It supports linting `.vue` files by using [eslint-plugin-vue].
 
 ## Plugin configs
-These configs are meant to be extended by other configs to add functionality, not to be used on their own.
+These configs are meant to be extended by other configs to add functionality, not to be used on their own. They are named `plugin-<name>.js`.
 
 ### JSDoc
-> `eslint-jsdoc.config.js`
+> `@myparcel/eslint-config/plugin-jsdoc`
 
-Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its custom rules.
+Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its custom rules for [JSDoc] comments.
 
 ### Jest
-> `eslint-jest.config.js`
+> `@myparcel/eslint-config/plugin-jest`
 
-Extend this config in any project using Jest. Contains rules from [eslint-plugin-jest].
+Extend this config in any project using [Jest]. Contains rules from [eslint-plugin-jest].
 
 ### JSDoc
-> `eslint-you-dont-need-momentjs.config.js`
+> `@myparcel/eslint-config/plugin-you-dont-need-momentjs`
 
 Contains [eslint-plugin-you-dont-need-momentjs] and applies its custom rules.
 
+[ESLint config file]: https://eslint.org/docs/user-guide/configuring
 [environments]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 [globals]: https://eslint.org/docs/user-guide/configuring#specifying-globals
 [rules]: https://eslint.org/docs/rules/
 [Meteor]: https://www.meteor.com/
 [Vue.js]: https://vuejs.org/
 [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
+[JSDoc]: https://devdocs.io/jsdoc/
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
+[Jest]: https://jestjs.io/
 [eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest
 [eslint-plugin-you-dont-need-momentjs]: https://www.npmjs.com/package/eslint-plugin-you-dont-need-momentjs
