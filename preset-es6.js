@@ -3,6 +3,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
+    allowImportExportEverywhere: true,
   },
   env: {
     es6: true,
