@@ -4,11 +4,11 @@ const standardVersionArgs = [];
 const githubReleaseArgs = [];
 
 if (args.includes('--dry-run')) {
-  githubReleaseArgs.push('--dryRun');
+  githubReleaseArgs.push('--draft');
 }
 
 const standardVersion = spawn('standard-version', [...standardVersionArgs, ...args], {stdio: 'inherit'});
 
 standardVersion.on('close', () => {
-  spawn('github-release-from-changelog', [...githubReleaseArgs], {stdio: 'inherit'});
+  spawn('conventional-github-releaser', [...githubReleaseArgs], {stdio: 'inherit'});
 });
