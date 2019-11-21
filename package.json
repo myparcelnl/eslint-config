@@ -13,7 +13,8 @@
   "main": "index.js",
   "files": [
     "{plugin,preset}-*.js",
-    "src/configurations/**/*.js"
+    "src/configurations/**/*.js",
+    "!*.template.*"
   ],
   "dependencies": {
     "babel-eslint": "^10.0.3",
