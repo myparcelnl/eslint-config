@@ -7,5 +7,8 @@ if (args.includes('--dry-run')) {
   githubReleaseArgs.push('--dryRun');
 }
 
-spawn('standard-version', ['-t', ...standardVersionArgs, ...args], {stdio: 'inherit'});
-spawn('github-release-from-changelog', [...githubReleaseArgs], {stdio: 'inherit'});
+const standardVersion = spawn('standard-version', ['-t', ...standardVersionArgs, ...args], {stdio: 'inherit'});
+
+standardVersion.on('close', () => {
+  spawn('github-release-from-changelog', [...githubReleaseArgs], {stdio: 'inherit'});
+});
