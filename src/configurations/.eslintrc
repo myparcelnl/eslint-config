@@ -1,0 +1,33 @@
+{
+  "rules": {
+    "quote-props": [
+      "warn",
+      "always"
+    ],
+    "max-len": "off",
+    "object-curly-newline": [
+      "error",
+      "always"
+    ],
+    "array-bracket-newline": [
+      "error",
+      "always"
+    ],
+    "array-element-newline": [
+      "error",
+      "always"
+    ],
+    "object-property-newline": [
+      "error",
+      {
+        "allowAllPropertiesOnSameLine": true
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "align": "value"
+      }
+    ]
+  }
+}

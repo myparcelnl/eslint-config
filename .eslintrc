@@ -3,7 +3,7 @@
     "node": true
   },
   "extends": [
-    "./index.js"
+    "./src/configurations/presets/es6.js"
   ],
   "rules": {
     "quote-props": [
