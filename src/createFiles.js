@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {getConfigurations} = require('./getConfigurations');
 
-const baseTemplate = fs.readFileSync(path.resolve(__dirname, 'config.template.js'));
+const baseTemplate = fs.readFileSync(path.resolve(__dirname, 'configurations/config.template.js'));
 
 getConfigurations().forEach(({extend, fileName, realFileName}) => {
   // eslint-disable-next-line max-len
