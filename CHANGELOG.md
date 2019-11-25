@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/myparcelnl/eslint-config/compare/v1.1.0...v1.1.1) (2019-11-25)
+
+
+### Development changes
+
+* use conventional-github-releaser ([552069e](https://github.com/myparcelnl/eslint-config/commit/552069e670c50b62b656b715076388b0ac443754))
+
 ## [1.1.0](https://github.com/myparcelnl/eslint-config/compare/v1.1.0-alpha.2...v1.1.0) (2019-11-21)
 
 

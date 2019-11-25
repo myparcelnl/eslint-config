@@ -2,7 +2,7 @@
   "name": "@myparcel/eslint-config",
   "author": "Edie Lemoine (edie@myparcel.nl)",
   "license": "GPL-3.0",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint configurations for various types of projects.",
   "scripts": {
     "build": "node src/createFiles.js",
