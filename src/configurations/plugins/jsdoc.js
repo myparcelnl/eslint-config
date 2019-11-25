@@ -1,4 +1,14 @@
 module.exports = {
+  'settings': {
+    'jsdoc': {
+      'preferredTypes': {
+        'string':  'String',
+        'boolean': 'Boolean',
+        'object':  'Object',
+        'number':  'Number',
+      },
+    },
+  },
   'plugins': [
     'jsdoc',
   ],
