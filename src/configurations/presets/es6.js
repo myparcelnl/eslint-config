@@ -1,12 +1,11 @@
 module.exports = {
   'parser':        'babel-eslint',
   'parserOptions': {
-    'ecmaVersion':                 2019,
     'sourceType':                  'module',
     'allowImportExportEverywhere': true,
   },
   'env': {
-    'es6': true,
+    'es2020': true,
   },
   'extends': [
     './default.js',
