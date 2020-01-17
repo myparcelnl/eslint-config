@@ -21,6 +21,10 @@
       "hidden": true
     },
     {
+      "type": "style",
+      "hidden": true
+    },
+    {
       "type": "refactor",
       "hidden": true
     },
