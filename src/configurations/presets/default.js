@@ -27,7 +27,15 @@ module.exports = {
       'warn',
       '1tbs',
     ],
-    'callback-return':        'off',
+    'callback-return': 'off',
+    'camelcase':       [
+      'warn',
+      {
+        'ignoreDestructuring': true,
+        'ignoreImports':       true,
+        'properties':          'never',
+      },
+    ],
     'capitalized-comments':   'off',
     'class-methods-use-this': 'off',
     'comma-dangle':           [
