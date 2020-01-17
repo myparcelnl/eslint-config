@@ -1,4 +1,8 @@
 module.exports = {
+  'parserOptions': {
+    'parser':                      'babel-eslint',
+    'allowImportExportEverywhere': true,
+  },
   'env': {
     'node': true,
   },
@@ -42,7 +46,7 @@ module.exports = {
     'vue/html-closing-bracket-newline': [
       'warn',
       {
-        'singleline': 'never', 'multiline':  'never',
+        'singleline': 'never', 'multiline': 'never',
       },
     ],
     'vue/multiline-html-element-content-newline': 'warn',
