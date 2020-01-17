@@ -2,14 +2,15 @@
   "name": "@myparcel/eslint-config",
   "author": "Edie Lemoine (edie@myparcel.nl)",
   "license": "GPL-3.0",
-  "version": "1.1.0-alpha.2",
+  "version": "1.1.1",
   "description": "ESLint configurations for various types of projects.",
   "scripts": {
     "build": "node src/createFiles.js",
     "lint": "eslint --fix ./*.js",
     "test": "jest --coverage",
     "release": "node ./private/release.js",
-    "prepublishOnly": "npm run test && npm run build"
+    "prepublishOnly": "npm run test && npm run build",
+    "link": "npm run build && npm run link"
   },
   "main": "index.js",
   "files": [
@@ -18,30 +19,33 @@
     "!*.template.*"
   ],
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
-    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-import-resolver-babel-module": "^5.1.1",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.0.4",
-    "eslint-plugin-jsdoc": "^18.1.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jsdoc": "^20.3.1",
     "eslint-plugin-json": "^2.0.1",
     "eslint-plugin-meteor": "^6.0.0",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-template": "^0.3.2",
-    "eslint-plugin-vue": "^6.0.1",
+    "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-you-dont-need-momentjs": "^1.5.0",
-    "github-release-from-changelog": "^2.1.0"
+    "typescript": "^3.7.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@types/jest": "^24.0.23",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@types/jest": "^24.9.0",
     "babel-jest": "^24.9.0",
-    "husky": "^3.1.0",
+    "conventional-github-releaser": "^3.1.3",
+    "husky": "^4.0.10",
     "jest": "^24.9.0",
     "jest-runner-eslint": "^0.7.5",
     "standard-version": "^7.0.1"
