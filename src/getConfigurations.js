@@ -5,7 +5,7 @@ const path = require('path');
 /**
  * Get the JSDoc configurations in a folder.
  *
- * @returns {Array.<object>}
+ * @returns {Array.<Object>}
  */
 function getConfigurations() {
   const baseDir = './src/configurations';
