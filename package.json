@@ -55,6 +55,9 @@
     "type": "git",
     "url": "git+https://github.com/myparcelnl/eslint-config.git"
   },
+  "resolutions": {
+    "@babel/parser": "7.7.5"
+  },
   "bugs": {
     "url": "https://github.com/myparcelnl/eslint-config/issues"
   },
