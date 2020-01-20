@@ -260,6 +260,7 @@ module.exports = {
       {
         'max'   : 1,
         'maxBOF': 0,
+        'maxEOF': 0,
       },
     ],
     'no-native-reassign'         : 'off',
