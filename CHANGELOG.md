@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/myparcelnl/eslint-config/compare/v1.2.0...v1.2.1) (2020-01-20)
+
+
+### Fixes
+
+* add tsconfig.json to dist files so it's not required to have one in a typescript project ([18d2736](https://github.com/myparcelnl/eslint-config/commit/18d2736702c229448c772b5b247b15063a512dfd))
+
 ## [1.2.0](https://github.com/myparcelnl/eslint-config/compare/v1.1.0-alpha.1...v1.2.0) (2020-01-17)
 
 
