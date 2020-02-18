@@ -12,10 +12,14 @@ const path = require('path');
 function getOverrides(directory) {
   const files = fs.readdirSync(path.resolve(__dirname, 'configurations', directory));
 
-  return files.map((fileName) => ({
+  return files.map((fileName) => {
+    const extendFile = fileName.replace(/\.test\.\w+$/, '.js');
+
+    return ({
       files: [fileName],
-      extends: [`../src/configurations/${directory}/${fileName.replace('.test', '')}`],
-  }));
+      extends: [`../src/configurations/${directory}/${extendFile}`],
+    });
+  });
 }
 
 module.exports = {
