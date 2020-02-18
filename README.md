@@ -60,6 +60,11 @@ This config is made for [Meteor] projects. In addition to the base config it ext
 
 This config is made for [Vue.js] projects. In addition to the base config it extends `plugin:vue/recommended`. It supports linting `.vue` files by using [eslint-plugin-vue].
 
+### TypeScript
+> `@myparcel/eslint-config/preset-typescript`
+
+This config is made for [TypeScript] projects. You need to have a `tsconfig.json` in your project root to use this preset. Uses [typescript-eslint/eslint-plugin] and [typescript-eslint/eslint-parser].
+
 ## Plugin configs
 These configs are meant to be extended by other configs to add functionality, not to be used on their own. They are named `plugin-<name>.js`.
 
@@ -73,7 +78,7 @@ Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its cust
 
 Extend this config in any project using [Jest]. Contains rules from [eslint-plugin-jest].
 
-### JSDoc
+### You Don't Need MomentJS
 > `@myparcel/eslint-config/plugin-you-dont-need-momentjs`
 
 Contains [eslint-plugin-you-dont-need-momentjs] and applies its custom rules.
@@ -85,6 +90,10 @@ Contains [eslint-plugin-you-dont-need-momentjs] and applies its custom rules.
 [Meteor]: https://www.meteor.com/
 [Vue.js]: https://vuejs.org/
 [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
+[TypeScript]: https://www.typescriptlang.org/
+[typescript-eslint]: https://github.com/typescript-eslint/typescript-eslint
+[typescript-eslint/eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+[typescript-eslint/eslint-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
 [JSDoc]: https://devdocs.io/jsdoc/
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
 [Jest]: https://jestjs.io/
