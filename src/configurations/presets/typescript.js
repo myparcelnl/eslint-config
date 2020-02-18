@@ -10,9 +10,6 @@ module.exports = {
   'parserOptions': {
     'project': './tsconfig.json',
   },
-  'env': {
-    'es6': true,
-  },
   'extends': [
     './es6',
   ],
