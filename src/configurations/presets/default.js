@@ -52,7 +52,7 @@ module.exports = {
     'complexity' : [
       'warn',
       {
-        max: 10,
+        'max': 10,
       },
     ],
     'computed-property-spacing': [
@@ -184,14 +184,14 @@ module.exports = {
     'max-lines-per-function': [
       'warn',
       {
-        max         : 50,
-        skipComments: true,
+        'max'         : 50,
+        'skipComments': true,
       },
     ],
     'max-nested-callbacks': [
       'warn',
       {
-        max: 3,
+        'max': 3,
       },
     ],
     'max-params': [
@@ -210,7 +210,7 @@ module.exports = {
     'newline-per-chained-call': [
       'warn',
       {
-        ignoreChainWithDepth: 2,
+        'ignoreChainWithDepth': 2,
       },
     ],
     'no-alert'                : 'warn',
@@ -251,7 +251,7 @@ module.exports = {
     'no-implicit-coercion'    : [
       'warn',
       {
-        boolean: false,
+        'boolean': false,
       },
     ],
     'no-implicit-globals'    : 'warn',
@@ -378,13 +378,13 @@ module.exports = {
         'ImportDeclaration': {
           'consistent': true,
         },
-        ExportDeclaration: 'never',
+        'ExportDeclaration': 'never',
       },
     ],
     'object-property-newline': [
       'warn',
       {
-        allowAllPropertiesOnSameLine: true,
+        'allowAllPropertiesOnSameLine': true,
       },
     ],
     'one-var': [
@@ -403,22 +403,22 @@ module.exports = {
     'padded-blocks': [
       'warn',
       {
-        blocks  : 'never',
-        switches: 'never',
-        classes : 'never',
+        'blocks'  : 'never',
+        'switches': 'never',
+        'classes' : 'never',
       },
     ],
     'padding-line-between-statements': [
       'error',
       /* eslint-disable object-property-newline,object-curly-newline */
-      {blankLine: 'always', prev: '*', next: 'cjs-export'},
-      {blankLine: 'always', prev: 'cjs-import', next: '*'},
-      {blankLine: 'always', prev: 'export', next: '*'},
-      {blankLine: 'always', prev: 'import', next: '*'},
-      {blankLine: 'any', prev: 'cjs-export', next: 'cjs-export'},
-      {blankLine: 'never', prev: 'cjs-import', next: 'cjs-import'},
-      {blankLine: 'any', prev: 'export', next: 'export'},
-      {blankLine: 'never', prev: 'import', next: 'import'},
+      {'blankLine': 'always', 'prev': '*', 'next': 'cjs-export'},
+      {'blankLine': 'always', 'prev': 'cjs-import', 'next': '*'},
+      {'blankLine': 'always', 'prev': 'export', 'next': '*'},
+      {'blankLine': 'always', 'prev': 'import', 'next': '*'},
+      {'blankLine': 'any', 'prev': 'cjs-export', 'next': 'cjs-export'},
+      {'blankLine': 'never', 'prev': 'cjs-import', 'next': 'cjs-import'},
+      {'blankLine': 'any', 'prev': 'export', 'next': 'export'},
+      {'blankLine': 'never', 'prev': 'import', 'next': 'import'},
       /* eslint-enable object-property-newline,object-curly-newline */
     ],
     'prefer-named-capture-group'  : 'off',
@@ -463,8 +463,8 @@ module.exports = {
       'warn',
       'always',
       {
-        block: {
-          balanced: true,
+        'block': {
+          'balanced': true,
         },
       },
     ],

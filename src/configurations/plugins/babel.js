@@ -1,4 +1,4 @@
-const {rules: defaultRules} = require('../presets/default');
+const {'rules': defaultRules} = require('../presets/default');
 
 module.exports = {
   'plugins': [

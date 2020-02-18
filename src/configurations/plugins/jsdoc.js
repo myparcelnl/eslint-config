@@ -7,10 +7,10 @@ module.exports = {
         'object' : 'Object',
         'number' : 'Number',
       },
-      tagNamePreference: {
-        return  : 'returns',
-        arg     : 'param',
-        argument: 'param',
+      'tagNamePreference': {
+        'return'  : 'returns',
+        'arg'     : 'param',
+        'argument': 'param',
       },
     },
   },

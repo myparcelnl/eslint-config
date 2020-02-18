@@ -64,13 +64,13 @@ module.exports = {
     'prefer-destructuring'     : [
       'warn',
       {
-        VariableDeclarator: {
-          array : false,
-          object: true,
+        'VariableDeclarator': {
+          'array' : false,
+          'object': true,
         },
-        AssignmentExpression: {
-          array : false,
-          object: false,
+        'AssignmentExpression': {
+          'array' : false,
+          'object': false,
         },
       },
     ],
