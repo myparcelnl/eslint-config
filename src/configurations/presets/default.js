@@ -206,7 +206,7 @@ module.exports = {
       'always-multiline',
     ],
     'new-parens'              : 'warn',
-    'newline-before-return'   : 'warn',
+    'newline-before-return'   : 'off',
     'newline-per-chained-call': [
       'warn',
       {
@@ -409,7 +409,7 @@ module.exports = {
       },
     ],
     'padding-line-between-statements': [
-      'error',
+      'warn',
       /* eslint-disable object-property-newline,object-curly-newline */
       {'blankLine': 'always', 'prev': '*', 'next': 'cjs-export'},
       {'blankLine': 'always', 'prev': 'cjs-import', 'next': '*'},
