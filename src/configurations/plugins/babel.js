@@ -1,3 +1,5 @@
+const {rules: defaultRules} = require('../presets/default');
+
 module.exports = {
   'plugins': [
     'babel',
@@ -10,21 +12,10 @@ module.exports = {
     'quotes'               : 'off',
     'semi'                 : 'off',
 
-    'babel/new-cap': [
-      'warn',
-    ],
-    'babel/no-unused-expressions': 'warn',
-    'babel/object-curly-spacing' : [
-      'warn',
-      'never',
-    ],
-    'babel/quotes': [
-      'warn',
-      'single',
-    ],
-    'babel/semi': [
-      'warn',
-      'always',
-    ],
+    'babel/new-cap'              : defaultRules['new-cap'],
+    'babel/no-unused-expressions': defaultRules['no-unused-expressions'],
+    'babel/object-curly-spacing' : defaultRules['object-curly-spacing'],
+    'babel/quotes'               : defaultRules.quotes,
+    'babel/semi'                 : defaultRules.semi,
   },
 };
