@@ -1,7 +1,7 @@
 const {'rules': defaultRules} = require('./default');
 const {'rules': es6Rules} = require('./es6');
 
-const vueRules = {
+const overrides = {
   'generator-star-spacing': 'off',
   'id-length'             : [
     'warn',
@@ -50,7 +50,7 @@ module.exports = {
     'vue',
   ],
   'rules': {
-    ...vueRules,
+    ...overrides,
 
     // Add some defined types to JSDoc plugin
     'jsdoc/no-undefined-types': [
@@ -83,6 +83,7 @@ module.exports = {
     // Uncategorized
     'vue/array-bracket-spacing'           : defaultRules['array-bracket-spacing'],
     'vue/arrow-spacing'                   : es6Rules['arrow-spacing'],
+    'vue/attributes-order'                : 'warn',
     'vue/block-spacing'                   : defaultRules['block-spacing'],
     'vue/brace-style'                     : defaultRules['brace-style'],
     'vue/camelcase'                       : defaultRules.camelcase,
@@ -100,6 +101,7 @@ module.exports = {
     ],
     'vue/dot-location'                      : defaultRules['dot-location'],
     'vue/eqeqeq'                            : defaultRules.eqeqeq,
+    'vue/html-quotes'                       : 'warn',
     'vue/key-spacing'                       : defaultRules['key-spacing'],
     'vue/keyword-spacing'                   : defaultRules['keyword-spacing'],
     'vue/match-component-file-name'         : 'warn',
@@ -114,10 +116,12 @@ module.exports = {
     'vue/no-restricted-syntax'              : defaultRules['no-restricted-syntax'],
     'vue/no-static-inline-styles'           : 'warn',
     'vue/no-unsupported-features'           : 'error',
-    'vue/object-curly-spacing'              : vueRules['babel/object-curly-spacing'],
+    'vue/object-curly-spacing'              : overrides['babel/object-curly-spacing'],
+    'vue/padding-line-between-blocks'       : 'warn',
     'vue/require-direct-export'             : 'warn',
     'vue/require-name-property'             : 'warn',
     'vue/script-indent'                     : 'warn',
+    'vue/sort-keys'                         : 'off',
     'vue/space-infix-ops'                   : defaultRules['space-infix-ops'],
     'vue/space-unary-ops'                   : defaultRules['space-unary-ops'],
     'vue/static-class-names-order'          : 'warn',
