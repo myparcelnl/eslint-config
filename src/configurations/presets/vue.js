@@ -52,6 +52,17 @@ module.exports = {
   'rules': {
     ...vueRules,
 
+    // Add some defined types to JSDoc plugin
+    'jsdoc/no-undefined-types': [
+      'warn',
+      {
+        'definedTypes': [
+          'VNode',
+          'webpack',
+        ],
+      },
+    ],
+
     // Vue plugin specific
     'vue/component-name-in-template-casing': [
       'warn',
