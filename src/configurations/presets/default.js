@@ -36,7 +36,7 @@ module.exports = {
         'properties'         : 'never',
       },
     ],
-    'capitalized-comments': 'warn',
+    'capitalized-comments': 'off',
     'comma-dangle'        : [
       'warn',
       'always-multiline',
@@ -162,12 +162,14 @@ module.exports = {
         'allowObjectEnd'    : false,
         'allowObjectStart'  : true,
         'beforeBlockComment': true,
-        'beforeLineComment' : true,
       },
     ],
     'lines-between-class-members': [
       'warn',
       'always',
+      {
+        'exceptAfterSingleLine': true,
+      },
     ],
     'lines-around-directive': 'warn',
     'max-depth'             : [
@@ -207,12 +209,7 @@ module.exports = {
     ],
     'new-parens'              : 'warn',
     'newline-before-return'   : 'off',
-    'newline-per-chained-call': [
-      'warn',
-      {
-        'ignoreChainWithDepth': 2,
-      },
-    ],
+    'newline-per-chained-call': 'off',
     'no-alert'                : 'warn',
     'no-array-constructor'    : 'warn',
     'no-bitwise'              : 'warn',
@@ -223,7 +220,7 @@ module.exports = {
     'no-cond-assign'          : 'warn',
     'no-console'              : 'warn',
     'no-constant-condition'   : 'warn',
-    'no-continue'             : 'off',
+    'no-continue'             : 'warn',
     'no-control-regex'        : 'off',
     'no-debugger'             : 'error',
     'no-delete-var'           : 'warn',
@@ -274,6 +271,7 @@ module.exports = {
           0,
           1,
           100,
+          1000,
         ],
         'detectObjects': true,
       },
