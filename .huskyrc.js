@@ -4,5 +4,6 @@ const preCommit = [
 ];
 
 module.exports = {
+  'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
   'precommit': preCommit.join(' && '),
 };
