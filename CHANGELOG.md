@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/myparcelnl/eslint-config/compare/v1.2.1...v1.2.2) (2020-03-05)
+
+
+### Fixes
+
+* **default:** enable more rules ([3417ddb](https://github.com/myparcelnl/eslint-config/commit/3417ddbae700aa3aa517529d097de62762121a57))
+* **default:** only allow exactly one empty line at the end of each file instead of two ([b8988f2](https://github.com/myparcelnl/eslint-config/commit/b8988f2c768aedf8cecc1145acf7f0264852458e))
+* **default:** swap error for warn in padding-line-between-statements ([76fd63c](https://github.com/myparcelnl/eslint-config/commit/76fd63c4f5f02754adbb7b9d9b69ef3354a993ab))
+* **default:** tweak some rules after testing ([de19686](https://github.com/myparcelnl/eslint-config/commit/de19686f1c1e6d06071180faae7ae416a64a4b92))
+* **es6:** disable prefer-destructuring for object assignment expressions ([c822beb](https://github.com/myparcelnl/eslint-config/commit/c822beb731f8cefd61f099c039f9d6a78d88c135))
+* **jsdoc:** disable jsdoc/require-param-description and convert [@return](https://github.com/return) to [@returns](https://github.com/returns) automatically (by enabling jsdoc/check-tag-names ([0a8df60](https://github.com/myparcelnl/eslint-config/commit/0a8df6078e882fa7fe7f0b08dbff556436255ff4))
+* **typescript:** remove unneeded env ([5d0932b](https://github.com/myparcelnl/eslint-config/commit/5d0932b3680ee74ae00404009e2f1d833ad9257e))
+* **vue:** add a few jsdoc definedTypes ([3e73d82](https://github.com/myparcelnl/eslint-config/commit/3e73d8252e9dd609ba35d364b2cdf610e9524cba))
+* **vue:** add new rules ([ee5e0c8](https://github.com/myparcelnl/eslint-config/commit/ee5e0c87adcd23756ede73bd7b2bb70c8e086e53))
+* improve the config template ([af75cbf](https://github.com/myparcelnl/eslint-config/commit/af75cbf3432856deeec400c735432a4df9d9834f))
+
 ### [1.2.1](https://github.com/myparcelnl/eslint-config/compare/v1.2.0...v1.2.1) (2020-01-20)
 
 
