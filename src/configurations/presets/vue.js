@@ -120,7 +120,7 @@ module.exports = {
     'vue/padding-line-between-blocks'       : 'warn',
     'vue/require-direct-export'             : 'warn',
     'vue/require-name-property'             : 'warn',
-    'vue/script-indent'                     : 'warn',
+    'vue/script-indent'                     : 'off',
     'vue/sort-keys'                         : 'off',
     'vue/space-infix-ops'                   : defaultRules['space-infix-ops'],
     'vue/space-unary-ops'                   : defaultRules['space-unary-ops'],
