@@ -9,7 +9,6 @@
     "lint": "eslint --fix ./*.js",
     "test": "jest --coverage",
     "release": "semantic-release",
-    "prepublishOnly": "npm run test && npm run build",
     "link": "npm run build && npm link",
     "watch": "watch 'npm run build' src"
   },
