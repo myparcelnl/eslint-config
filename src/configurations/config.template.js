@@ -18,6 +18,4 @@
  * @see https://eslint.org/docs/user-guide/configuring
  */
 
-module.exports = {
-  extends: ['__FILE_PATH__'],
-};
+module.exports = __CONFIG__;
