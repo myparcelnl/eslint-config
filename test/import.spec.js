@@ -8,4 +8,3 @@ describe('All files can be imported', () => {
     expect(() => require(path.resolve(__dirname, '../', file))).not.toThrow();
   });
 });
-

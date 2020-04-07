@@ -1,3 +1,6 @@
+const path = require('path');
+const {baseDir} = require('../../../private/baseDir');
+
 /**
  * Using this config requires you to have a tsconfig.json in your project.
  */
@@ -7,7 +10,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   'parserOptions': {
-    'project': './tsconfig.json',
+    'project': path.relative(baseDir, 'tsconfig.json'),
   },
   'extends': [
     './es6',
