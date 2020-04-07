@@ -13,7 +13,7 @@ function getOverrides(directory) {
   const files = fs.readdirSync(path.resolve(__dirname, 'configurations', directory));
 
   return files.map((fileName) => {
-    const extendFile = fileName.replace(/\.test\.\w+$/, '.js');
+    const extendFile = fileName.replace(/\.lint\.\w+$/, '.js');
 
     return ({
       files: [fileName],

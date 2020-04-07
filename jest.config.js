@@ -1,17 +1,17 @@
 module.exports = {
-  collectCoverageFrom: ['<rootDir>/src/**/*.js'],
-  projects: [
+  'collectCoverageFrom': ['<rootDir>/src/**/*.*'],
+  'transform': {
+    '^.+\\.[t|j]sx?$': 'babel-jest',
+  },
+  'projects': [
     {
       displayName: 'test',
-      testMatch: ['<rootDir>/test/**/*.spec.js'],
-      transform: {
-        '^.+\\.[t|j]sx?$': 'babel-jest',
-      },
+      testMatch: ['<rootDir>/test/**/*.spec.*'],
     },
     {
       displayName: 'lint',
       runner: 'jest-runner-eslint',
-      testMatch: ['<rootDir>/test/**/*.test.js'],
+      testMatch: ['<rootDir>/test/**/*.lint.*'],
     },
   ],
 };
