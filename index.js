@@ -1,3 +1,3 @@
 module.exports = {
-  extends: './default.js',
+  extends: './preset-default.js',
 };
