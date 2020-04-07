@@ -28,7 +28,7 @@ describe('createFiles', () => {
     expect.assertions(1);
     const baseFile = (await import(path.resolve(baseDir, 'preset-default.js'))).default;
 
-    expect(baseFile.extends.every((item) => item.startsWith('/'))).toBe(true);
+    expect(baseFile.extends.every((item) => !item.startsWith('/'))).toBe(true);
   });
 
   afterEach(() => {

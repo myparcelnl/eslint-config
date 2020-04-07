@@ -2,7 +2,7 @@ name: Run tests and update coverage
 
 on:
   pull_request:
-    branches: 
+    branches:
       - master
       - develop
 
@@ -16,9 +16,13 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm run build --if-present
+
+      - name: Build package
+        run: npm run build
+
       - name: Run tests
         run: npm test
+
       - name: Update coverage
         uses: coverallsapp/github-action@master
         with:

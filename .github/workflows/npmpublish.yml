@@ -2,11 +2,11 @@ name: Create release and publish to NPM
 
 on:
   push:
-    branches: 
-      - master 
-    paths: 
+    branches:
+      - master
+    paths:
       - src/*
-      - package.json 
+      - package.json
       - package-lock.json
 
 jobs:
@@ -20,6 +20,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
 
+      - name: Build package
+        run: npm run build
+
       - name: Run tests
         run: npm test
 
@@ -27,9 +30,6 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build package
-        run: npm run build
 
       - name: Run semantic release
         uses: brpaz/action-semantic-release@v1
