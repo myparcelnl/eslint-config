@@ -1,14 +1,15 @@
 const {resolveConfiguration} = require('../src/resolveConfiguration');
+const {name: packageName} = require('../package');
 
 describe('Resolves configurations correctly', () => {
   it.each`
     category    | file                        | extend
-    ${'plugin'} | ${'jest'}                   | ${'@myparcel/eslint-config/plugin-jest'}
-    ${'plugin'} | ${'meteor'}                 | ${'@myparcel/eslint-config/plugin-meteor'}
-    ${'plugin'} | ${'you-dont-need-momentjs'} | ${'@myparcel/eslint-config/plugin-you-dont-need-momentjs'}
-    ${'preset'} | ${'default'}                | ${'@myparcel/eslint-config/preset-default'}
-    ${'preset'} | ${'es6'}                    | ${'@myparcel/eslint-config/preset-es6'}
-    ${'preset'} | ${'vue'}                    | ${'@myparcel/eslint-config/preset-vue'}
+    ${'plugin'} | ${'jest'}                   | ${`${packageName}/plugin-jest`}
+    ${'plugin'} | ${'meteor'}                 | ${`${packageName}/plugin-meteor`}
+    ${'plugin'} | ${'you-dont-need-momentjs'} | ${`${packageName}/plugin-you-dont-need-momentjs`}
+    ${'preset'} | ${'default'}                | ${`${packageName}/preset-default`}
+    ${'preset'} | ${'es6'}                    | ${`${packageName}/preset-es6`}
+    ${'preset'} | ${'vue'}                    | ${`${packageName}/preset-vue`}
   `('Resolves $file to $extend', ({category, file, extend}) => {
   expect(resolveConfiguration(category, file)).toEqual(extend);
 });

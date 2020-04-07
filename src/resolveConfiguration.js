@@ -1,4 +1,4 @@
-const packageName = require('../package').name;
+const {name: packageName} = require('../package');
 
 /**
  * @param {String} category
