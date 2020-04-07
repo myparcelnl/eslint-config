@@ -1,4 +1,4 @@
-const {getPreset} = require('../../../private/getConfiguration');
+const {getPreset} = require('../../getConfiguration');
 const {'rules': defaultRules} = require('./default');
 const {'rules': es6Rules} = require('./es6');
 

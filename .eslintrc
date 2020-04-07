@@ -13,7 +13,7 @@
     "no-magic-numbers": "off"
   },
   "ignorePatterns": [
-    "./preset-*.js",
-    "./plugin-*.js"
+    "preset-*.js",
+    "plugin-*.js"
   ]
 }

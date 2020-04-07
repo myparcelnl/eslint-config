@@ -1,4 +1,4 @@
-const {getPlugin} = require('../../../private/getConfiguration');
+const {getPlugin} = require('../../getConfiguration');
 
 module.exports = {
   'env': {

@@ -1,6 +1,6 @@
 const path = require('path');
-const {getPreset} = require('../../../private/getConfiguration');
-const {baseDir} = require('../../../private/baseDir');
+const {getPreset} = require('../../getConfiguration');
+const {baseDir} = require('../../baseDir');
 
 /**
  * Using this config requires you to have a tsconfig.json in your project.

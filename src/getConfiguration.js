@@ -1,4 +1,3 @@
-const path = require('path');
 const {baseDir} = require('./baseDir');
 
 /**
@@ -8,7 +7,7 @@ const {baseDir} = require('./baseDir');
  */
 function get(type, name) {
   if (process.env.NODE_ENV === 'test') {
-    return path.relative(baseDir, path.resolve(baseDir, 'src', 'configurations', `${type}s`, `${name}.js`));
+    return `${baseDir}/src/configurations/${type}s/${name}.js`;
   }
 
   return `./${type}-${name}.js`;

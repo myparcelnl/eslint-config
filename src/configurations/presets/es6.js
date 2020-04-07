@@ -1,5 +1,5 @@
-const {getPlugin} = require('../../../private/getConfiguration');
-const {getPreset} = require('../../../private/getConfiguration');
+const {getPlugin} = require('../../getConfiguration');
+const {getPreset} = require('../../getConfiguration');
 
 module.exports = {
   'parser'       : 'babel-eslint',

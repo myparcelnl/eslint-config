@@ -1,4 +1,4 @@
-const {getPreset} = require('../../../private/getConfiguration');
+const {getPreset} = require('../../getConfiguration');
 
 module.exports = {
   'env': {

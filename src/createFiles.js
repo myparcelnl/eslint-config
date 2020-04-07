@@ -16,7 +16,7 @@ const linter = new Linter();
  *
  * @type {String}
  */
-const baseTemplate = fs.readFileSync(path.resolve(__dirname, 'configurations/config.template.js')).toString();
+const baseTemplate = fs.readFileSync(path.resolve(__dirname, 'configurations/config.template.txt')).toString();
 
 /**
  * @param {String} needle - String to replace.

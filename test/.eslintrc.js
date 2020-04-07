@@ -10,27 +10,32 @@ const path = require('path');
  * @returns {Array}
  */
 function getOverrides(directory) {
-  const files = fs.readdirSync(path.resolve(__dirname, 'configurations', directory));
+  let dir = path.resolve(__dirname, 'configurations', directory);
+  const files = fs.readdirSync(dir);
 
   return files.map((fileName) => {
     const extendFile = fileName.replace(/\.lint\.\w+$/, '.js');
 
     return ({
-      files: [fileName],
+      files: [path.relative(__dirname, dir + '/' + fileName)],
       extends: [`../src/configurations/${directory}/${extendFile}`],
     });
   });
 }
 
-module.exports = {
-  env: {
-    jest: true,
-  },
-  extends: [
-    '../src/configurations/presets/es6.js',
-  ],
-  overrides: [
-    ...getOverrides('presets'),
-    ...getOverrides('plugins'),
-  ],
-};
+// Only load these overrides during a test.
+module.exports = process.env.NODE_ENV === 'test'
+  ? {
+    extends: [
+      '../src/configurations/presets/es6.js',
+    ],
+    overrides: [
+      ...getOverrides('presets'),
+      ...getOverrides('plugins'),
+    ],
+  }
+  : {
+    env: {
+      jest: true,
+    },
+  };
