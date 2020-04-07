@@ -1,4 +1,5 @@
 const path = require('path');
+const {getPreset} = require('../../../private/getConfiguration');
 const {baseDir} = require('../../../private/baseDir');
 
 /**
@@ -13,7 +14,7 @@ module.exports = {
     'project': path.relative(baseDir, 'tsconfig.json'),
   },
   'extends': [
-    './es6',
+    getPreset('es6'),
   ],
   'rules': {
     '@typescript-eslint/consistent-type-definitions': [

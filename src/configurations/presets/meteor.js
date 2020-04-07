@@ -1,3 +1,5 @@
+const {getPreset} = require('../../../private/getConfiguration');
+
 module.exports = {
   'env': {
     'es2020': true,
@@ -6,7 +8,7 @@ module.exports = {
     'node'  : true,
   },
   'extends': [
-    './es6.js',
+    getPreset('es6'),
     'plugin:meteor/recommended',
   ],
   'plugins': [

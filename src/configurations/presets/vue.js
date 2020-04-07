@@ -1,3 +1,4 @@
+const {getPreset} = require('../../../private/getConfiguration');
 const {'rules': defaultRules} = require('./default');
 const {'rules': es6Rules} = require('./es6');
 
@@ -43,7 +44,7 @@ module.exports = {
     'node': true,
   },
   'extends': [
-    './es6.js',
+    getPreset('es6'),
     'plugin:vue/recommended',
   ],
   'plugins': [

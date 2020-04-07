@@ -1,3 +1,6 @@
+const {getPlugin} = require('../../../private/getConfiguration');
+const {getPreset} = require('../../../private/getConfiguration');
+
 module.exports = {
   'parser'       : 'babel-eslint',
   'parserOptions': {
@@ -8,8 +11,8 @@ module.exports = {
     'es2020': true,
   },
   'extends': [
-    './default.js',
-    '../plugins/babel.js',
+    getPreset('default'),
+    getPlugin('babel'),
   ],
   'rules': {
     // Default overrides

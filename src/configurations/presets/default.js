@@ -1,10 +1,12 @@
+const {getPlugin} = require('../../../private/getConfiguration');
+
 module.exports = {
   'env': {
     'browser': true,
   },
   'extends': [
-    '../plugins/jsdoc.js',
-    '../plugins/you-dont-need-momentjs.js',
+    getPlugin('jsdoc'),
+    getPlugin('you-dont-need-momentjs'),
   ],
   'rules': {
     'accessor-pairs'       : 'off',

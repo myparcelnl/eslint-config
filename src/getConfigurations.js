@@ -10,7 +10,6 @@ const {resolveConfiguration} = require('./resolveConfiguration');
  */
 function getConfigurations() {
   const allowedDirs = ['presets', 'plugins'];
-  const baseDir = './src/configurations';
   const realBaseDir = path.resolve(`${__dirname}/configurations`);
   const paths = [];
 
