@@ -1,5 +1,8 @@
-# MyParcel ESLint
+# MyParcel ESLint configuration
+
 This package contains multiple ESLint presets for different types of projects. Additional information, documentation and guides on ESLint can be found on https://eslint.org/ 
+
+[![Coverage Status](https://coveralls.io/repos/github/myparcelnl/eslint-config/badge.svg?branch=master)](https://coveralls.io/github/myparcelnl/eslint-config?branch=master)
 
 ## Usage
 Install the package via npm:
