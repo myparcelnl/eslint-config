@@ -1,13 +1,13 @@
-name: Node.js Package
+name: Create release and publish to NPM
 
 on:
   push:
     branches: 
-      - master
+      - master 
     paths: 
       - src/*
       - package.json 
-      - package-lock.json 
+      - package-lock.json
 
 jobs:
   publish-npm:
@@ -19,14 +19,24 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm test
-      - name: Build
+
+      - name: Run tests
+        run: npm test
+
+      - name: Update coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build package
         run: npm run build
+
       - name: Create new release
         run: |
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
           npm run release
+
       - name: Publish to npm
         run: npm publish
         env:
