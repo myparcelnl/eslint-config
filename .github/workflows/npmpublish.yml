@@ -33,3 +33,6 @@ jobs:
 
       - name: Run semantic release
         uses: brpaz/action-semantic-release@v1
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
