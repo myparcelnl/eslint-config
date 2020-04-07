@@ -23,10 +23,12 @@ module.exports = {
       'warn',
       {
         'capIsNewExceptions': [
+          'Data',
+          'Events',
+          'RestGtm',
+          'RestValidation',
           'TemplateController',
           'Validation',
-          'Events',
-          'Data',
         ],
       },
     ],
