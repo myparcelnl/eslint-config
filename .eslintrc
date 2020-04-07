@@ -11,5 +11,9 @@
       "consistent"
     ],
     "no-magic-numbers": "off"
-  }
+  },
+  "ignorePatterns": [
+    "./preset-*.js",
+    "./plugin-*.js"
+  ]
 }

@@ -1,5 +1,13 @@
 {
   "rules": {
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "comma-dangle": [
+      "warn",
+      "always-multiline"
+    ],
     "quote-props": [
       "warn",
       "always"

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {getConfigurations} = require('./getConfigurations');
 const {Linter} = require('eslint');
-const linterConfig = require('../src/configurations/presets/default');
+const linterConfig = require('./configurations/.eslintrc.json');
 
 /**
  * ESLint instance.
