@@ -2,15 +2,18 @@ module.exports = {
   'settings': {
     'jsdoc': {
       'preferredTypes': {
-        'string' : 'String',
+        'Integer': 'Number',
         'boolean': 'Boolean',
-        'object' : 'Object',
+        'integer': 'Number',
         'number' : 'Number',
+        'object' : 'Object',
+        'string' : 'String',
       },
       'tagNamePreference': {
-        'return'  : 'returns',
         'arg'     : 'param',
         'argument': 'param',
+        'link'    : 'see',
+        'return'  : 'returns',
       },
     },
   },
