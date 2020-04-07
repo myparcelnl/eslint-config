@@ -27,7 +27,7 @@ function getConfigurations() {
     files.forEach((fileName) => {
       paths.push({
         extend: resolveConfiguration(categoryName, fileName.replace(/\.\w+$/, '')),
-        realFileName: `${baseDir}/${folder}/${fileName}`,
+        realFileName: `${realBaseDir}/${folder}/${fileName}`,
         fileName: `${categoryName}-${fileName}`,
       });
     });

@@ -1,4 +1,5 @@
 module.exports = {
+  'clearMocks': true,
   'collectCoverageFrom': ['<rootDir>/src/**/*.*'],
   'transform': {
     '^.+\\.[t|j]sx?$': 'babel-jest',
