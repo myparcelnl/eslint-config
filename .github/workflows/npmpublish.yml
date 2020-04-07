@@ -31,13 +31,5 @@ jobs:
       - name: Build package
         run: npm run build
 
-      - name: Create new release
-        run: |
-          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-          git pull github ${GITHUB_REF} --ff-only
-          npm run release
-
-      - name: Publish to npm
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - name: Run semantic release
+        uses: brpaz/action-semantic-release@v1
