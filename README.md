@@ -2,6 +2,8 @@
 
 This package contains multiple ESLint presets for different types of projects. Additional information, documentation and guides on ESLint can be found on https://eslint.org/ 
 
+![ESLint version](https://img.shields.io/github/package-json/dependency-version/myparcelnl/eslint-config/eslint)
+![Version on NPM](https://img.shields.io/npm/v/@myparcel/eslint-config)
 [![Coverage Status](https://coveralls.io/repos/github/myparcelnl/eslint-config/badge.svg?branch=master)](https://coveralls.io/github/myparcelnl/eslint-config?branch=master)
 
 ## Usage
