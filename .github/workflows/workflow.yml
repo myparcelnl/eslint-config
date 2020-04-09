@@ -1,6 +1,7 @@
 name: Create release and publish to NPM
 
 on:
+
   pull_request: ~
   push:
     branches:
@@ -35,6 +36,6 @@ jobs:
       - name: Run semantic release
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: brpaz/action-semantic-release@v1
-        with:
+        env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
