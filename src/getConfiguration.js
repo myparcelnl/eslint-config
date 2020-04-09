@@ -1,6 +1,8 @@
 const {baseDir} = require('./baseDir');
 
 /**
+ * Get the path to a configuration based on the current environment.
+ *
  * @param {String} type
  * @param {String} name
  * @returns {String}
