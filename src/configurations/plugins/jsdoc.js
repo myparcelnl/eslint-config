@@ -1,13 +1,25 @@
+const arrayPreferredType = {
+  'message': 'Please define a type explicitly. Example: String[]',
+};
+
 module.exports = {
   'settings': {
     'jsdoc': {
       'preferredTypes': {
-        'Integer': 'Number',
-        'boolean': 'Boolean',
-        'integer': 'Number',
-        'number' : 'Number',
-        'object' : 'Object',
-        'string' : 'String',
+        'Array<>' : '[]',
+        'Array.<>': '[]',
+        'Array'   : arrayPreferredType,
+        'array'   : arrayPreferredType,
+        'Integer' : 'Number',
+        'boolean' : 'Boolean',
+        'integer' : 'Number',
+        'number'  : 'Number',
+        'object'  : 'Object',
+        'string'  : 'String',
+        'event'   : 'Event',
+        '*'       : {
+          'message': 'Type * is not allowed. Please define a type explicitly.',
+        },
       },
       'tagNamePreference': {
         'arg'     : 'param',
