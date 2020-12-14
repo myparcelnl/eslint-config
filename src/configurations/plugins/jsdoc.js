@@ -6,22 +6,25 @@ module.exports = {
   'settings': {
     'jsdoc': {
       'preferredTypes': {
-        'Array<>' : '[]',
-        'Array.<>': '[]',
         'Array'   : arrayPreferredType,
-        'array'   : arrayPreferredType,
+        'Array.<>': '[]',
+        'Array<>' : '[]',
         'Integer' : 'Number',
+        'Promise' : 'Promise<*>',
+        'array'   : 'Array',
         'boolean' : 'Boolean',
+        'event'   : 'Event',
         'integer' : 'Number',
         'number'  : 'Number',
         'object'  : 'Object',
+        'promise' : 'Promise',
         'string'  : 'String',
-        'event'   : 'Event',
         '*'       : {
           'message': 'Type * is not allowed. Please define a type explicitly.',
         },
       },
       'tagNamePreference': {
+        'TODO'    : 'todo',
         'arg'     : 'param',
         'argument': 'param',
         'link'    : 'see',
