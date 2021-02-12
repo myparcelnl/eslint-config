@@ -429,7 +429,10 @@ module.exports = {
       'warn',
       'as-needed',
     ],
-    'radix'                 : 'off',
+    'radix': [
+      'warn',
+      'as-needed',
+    ],
     'require-atomic-updates': 'off',
     'require-unicode-regexp': 'off',
     'semi-spacing'          : 'warn',
