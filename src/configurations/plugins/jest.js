@@ -55,7 +55,6 @@ module.exports = {
     'jest/prefer-todo'               : 'warn',
     'jest/require-to-throw-message'  : 'warn',
     'jest/require-top-level-describe': 'warn',
-    'jest/unbound-method'            : 'warn',
     'jest/valid-describe'            : 'warn',
     'jest/valid-expect'              : 'warn',
     'jest/valid-expect-in-promise'   : 'warn',
