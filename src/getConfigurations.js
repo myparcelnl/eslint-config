@@ -6,7 +6,7 @@ const {resolveConfiguration} = require('./resolveConfiguration');
 /**
  * Get the JSDoc configurations in a folder.
  *
- * @returns {Array.<Object>}
+ * @returns {Object[]}
  */
 function getConfigurations() {
   const allowedDirs = ['presets', 'plugins'];
