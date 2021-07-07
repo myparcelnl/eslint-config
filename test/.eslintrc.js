@@ -10,16 +10,16 @@ const path = require('path');
  * @returns {Array}
  */
 function getOverrides(directory) {
-  let dir = path.resolve(__dirname, 'configurations', directory);
+  const dir = path.resolve(__dirname, 'configurations', directory);
   const files = fs.readdirSync(dir);
 
   return files.map((fileName) => {
     const extendFile = fileName.replace(/\.lint\.\w+$/, '.js');
 
-    return ({
-      files: [path.relative(__dirname, dir + '/' + fileName)],
+    return {
+      files: [path.relative(__dirname, `${dir}/${fileName}`)],
       extends: [`../src/configurations/${directory}/${extendFile}`],
-    });
+    };
   });
 }
 
