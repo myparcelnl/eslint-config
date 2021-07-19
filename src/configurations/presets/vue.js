@@ -2,6 +2,10 @@ const {getPreset} = require('../../getConfiguration');
 const {'rules': defaultRules} = require('./default');
 const {'rules': es6Rules} = require('./es6');
 
+/**
+ * Note: If you're using plugin-tailwindcss, you need to disable either tailwindcss/classnames-order or
+ * vue/static-class-names-order, depending on which functionality you want to preserve.
+ */
 const overrides = {
   'generator-star-spacing': 'off',
   'id-length'             : [
