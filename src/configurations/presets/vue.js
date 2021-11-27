@@ -123,7 +123,7 @@ module.exports = {
     'vue/no-unsupported-features'           : 'error',
     'vue/object-curly-spacing'              : overrides['babel/object-curly-spacing'],
     'vue/padding-line-between-blocks'       : 'warn',
-    'vue/require-direct-export'             : 'warn',
+    'vue/require-direct-export'             : 'off',
     'vue/require-name-property'             : 'warn',
     'vue/script-indent'                     : 'off',
     'vue/sort-keys'                         : 'off',

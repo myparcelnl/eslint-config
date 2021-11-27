@@ -4,7 +4,7 @@ const typeScriptConfig = require('./typescript');
 module.exports = {
   ...typeScriptConfig,
   ...vueConfig,
-  'parser': null,
+  'parser': '@typescript-eslint/parser',
 
   'parserOptions': {
     ...vueConfig.parserOptions,
@@ -16,7 +16,6 @@ module.exports = {
     'extraFileExtensions': [
       '.vue',
     ],
-    'parser'    : '@typescript-eslint/parser',
     'sourceType': 'module',
   },
 
