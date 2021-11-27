@@ -11,6 +11,7 @@ const overrides = {
   // Default
   'brace-style'                : 'off',
   'camelcase'                  : 'off',
+  'comma-dangle'               : 'off',
   'comma-spacing'              : 'off',
   'func-call-spacing'          : 'off',
   'indent'                     : 'off',
@@ -64,6 +65,8 @@ module.exports = {
     ...overrides,
     // Default extensions
     '@typescript-eslint/brace-style'         : defaultRules['brace-style'],
+    '@typescript-eslint/comma-dangle'        : defaultRules['comma-dangle'],
+    '@typescript-eslint/comma-spacing'       : defaultRules['comma-spacing'],
     '@typescript-eslint/func-call-spacing'   : defaultRules['func-call-spacing'],
     '@typescript-eslint/indent'              : defaultRules.indent,
     '@typescript-eslint/no-array-constructor': defaultRules['no-array-constructor'],
@@ -91,13 +94,14 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': es6Rules['no-useless-constructor'],
     '@typescript-eslint/require-await'         : es6Rules['require-await'],
 
-    '@typescript-eslint/adjacent-overload-signatures': 'warn',
-    '@typescript-eslint/array-type'                  : 'warn',
-    '@typescript-eslint/await-thenable'              : 'warn',
-    '@typescript-eslint/ban-ts-comment'              : 'warn',
-    '@typescript-eslint/ban-types'                   : 'warn',
-    '@typescript-eslint/consistent-type-assertions'  : 'warn',
-    '@typescript-eslint/consistent-type-definitions' : [
+    '@typescript-eslint/adjacent-overload-signatures'   : 'warn',
+    '@typescript-eslint/array-type'                     : 'warn',
+    '@typescript-eslint/await-thenable'                 : 'warn',
+    '@typescript-eslint/ban-ts-comment'                 : 'warn',
+    '@typescript-eslint/ban-types'                      : 'warn',
+    '@typescript-eslint/consistent-indexed-object-style': 'warn',
+    '@typescript-eslint/consistent-type-assertions'     : 'warn',
+    '@typescript-eslint/consistent-type-definitions'    : [
       'warn',
       'interface',
     ],
@@ -158,7 +162,7 @@ module.exports = {
     '@typescript-eslint/no-parameter-properties'            : 'warn',
     '@typescript-eslint/no-require-imports'                 : 'off',
     '@typescript-eslint/no-this-alias'                      : 'warn',
-    '@typescript-eslint/no-type-alias'                      : 'warn',
+    '@typescript-eslint/no-type-alias'                      : 'off',
     '@typescript-eslint/no-unnecessary-condition'           : 'off',
     '@typescript-eslint/no-unnecessary-qualifier'           : 'warn',
     '@typescript-eslint/no-unnecessary-type-arguments'      : 'warn',
@@ -166,7 +170,6 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call'                     : 'off',
     '@typescript-eslint/no-unsafe-member-access'            : 'off',
     '@typescript-eslint/no-unsafe-return'                   : 'off',
-    '@typescript-eslint/no-unused-vars-experimental'        : 'warn',
     '@typescript-eslint/no-var-requires'                    : 'warn',
     '@typescript-eslint/prefer-for-of'                      : 'warn',
     '@typescript-eslint/prefer-function-type'               : 'warn',
@@ -198,15 +201,10 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'warn',
 
     // New rules, to be implemented.
-    '@typescript-eslint/naming-convention-utils'               : 'off',
     '@typescript-eslint/ban-tslint-comment'                    : 'off',
     '@typescript-eslint/class-literal-property-style'          : 'off',
-    '@typescript-eslint/comma-dangle'                          : 'off',
-    '@typescript-eslint/comma-spacing'                         : 'off',
-    '@typescript-eslint/consistent-indexed-object-style'       : 'off',
     '@typescript-eslint/consistent-type-imports'               : 'off',
     '@typescript-eslint/dot-notation'                          : 'off',
-    '@typescript-eslint/index'                                 : 'off',
     '@typescript-eslint/init-declarations'                     : 'off',
     '@typescript-eslint/keyword-spacing'                       : 'off',
     '@typescript-eslint/lines-between-class-members'           : 'off',
@@ -237,5 +235,13 @@ module.exports = {
     '@typescript-eslint/sort-type-union-intersection-members'  : 'off',
     '@typescript-eslint/space-infix-ops'                       : 'off',
     '@typescript-eslint/switch-exhaustiveness-check'           : 'off',
+
+    // Newer
+    '@typescript-eslint/consistent-type-exports'                : 'off',
+    '@typescript-eslint/no-meaningless-void-operator'           : 'off',
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'off',
+    '@typescript-eslint/no-restricted-imports'                  : 'off',
+    '@typescript-eslint/padding-line-between-statements'        : 'off',
+    '@typescript-eslint/prefer-return-this-type'                : 'off',
   },
 };

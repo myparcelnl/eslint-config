@@ -5,7 +5,7 @@ module.exports = {
     '<rootDir>/src/**/*.ts',
   ],
   'transform': {
-    '^.+\\.[t|j]sx?$': 'babel-jest',
+    '^.+\\.[jt]sx?$': 'babel-jest',
   },
   'projects': [
     {

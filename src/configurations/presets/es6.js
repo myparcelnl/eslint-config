@@ -2,7 +2,7 @@ const {getPlugin} = require('../../getConfiguration');
 const {getPreset} = require('../../getConfiguration');
 
 module.exports = {
-  'parser'       : 'babel-eslint',
+  'parser'       : '@babel/eslint-parser',
   'parserOptions': {
     'sourceType'                 : 'module',
     'allowImportExportEverywhere': true,

@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "requireConfigFile": false
+  },
   "rules": {
     "quotes": [
       "error",
