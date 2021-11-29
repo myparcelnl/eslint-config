@@ -86,7 +86,7 @@ module.exports = {
     'vue/comma-spacing'                    : 'error',
     'vue/comma-style'                      : 'error',
     'vue/comment-directive'                : 'error',
-    'vue/component-api-style'              : 'error',
+    'vue/component-api-style'              : 'off',
     'vue/component-definition-name-casing' : 'warn',
     'vue/component-name-in-template-casing': [
       'warn',
