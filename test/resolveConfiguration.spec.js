@@ -11,6 +11,6 @@ describe('Resolves configurations correctly', () => {
     ${'preset'} | ${'es6'}                    | ${`${packageName}/preset-es6`}
     ${'preset'} | ${'vue'}                    | ${`${packageName}/preset-vue`}
   `('Resolves $file to $extend', ({category, file, extend}) => {
-  expect(resolveConfiguration(category, file)).toEqual(extend);
-});
+    expect(resolveConfiguration(category, file)).toEqual(extend);
+  });
 });

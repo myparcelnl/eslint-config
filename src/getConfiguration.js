@@ -3,9 +3,9 @@ const {baseDir} = require('./baseDir');
 /**
  * Get the path to a configuration based on the current environment.
  *
- * @param {String} type
- * @param {String} name
- * @returns {String}
+ * @param {string} type
+ * @param {string} name
+ * @returns {string}
  */
 function get(type, name) {
   if (process.env.NODE_ENV === 'test') {
@@ -16,16 +16,16 @@ function get(type, name) {
 }
 
 /**
- * @param {String} name
- * @returns {String}
+ * @param {string} name
+ * @returns {string}
  */
 function getPreset(name) {
   return get('preset', name);
 }
 
 /**
- * @param {String} name
- * @returns {String}
+ * @param {string} name
+ * @returns {string}
  */
 function getPlugin(name) {
   return get('plugin', name);

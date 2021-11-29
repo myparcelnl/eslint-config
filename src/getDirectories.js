@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 /**
- * @param {String} source - Source directory.
+ * @param {string} source - Source directory.
  *
  * @returns {Array}
  */

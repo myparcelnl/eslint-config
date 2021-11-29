@@ -14,15 +14,15 @@ const linter = new Linter();
 /**
  * Template file for all configurations.
  *
- * @type {String}
+ * @type {string}
  */
 const baseTemplate = fs.readFileSync(path.resolve(__dirname, 'configurations/config.template.txt')).toString();
 
 /**
- * @param {String} needle - String to replace.
- * @param {String} replace - New value.
- * @param {String} haystack - String to search and replace in.
- * @returns {String}
+ * @param {string} needle - String to replace.
+ * @param {string} replace - New value.
+ * @param {string} haystack - String to search and replace in.
+ * @returns {string}
  */
 const replace = (needle, replace, haystack) => {
   return haystack.replace(new RegExp(needle, 'g'), replace);
