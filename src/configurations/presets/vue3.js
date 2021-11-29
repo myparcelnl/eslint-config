@@ -1,12 +1,30 @@
-const vueConfig = require('./vue');
 const {getPreset} = require('../../getConfiguration');
 
 module.exports = {
-  ...vueConfig,
   'extends': [
-    getPreset('es6'),
-    'plugin:vue/vue3-essential',
+    getPreset('vue'),
     'plugin:vue/vue3-recommended',
-    'plugin:vue/vue3-strongly-recommended',
   ],
+  'rules': {
+    'vue/block-lang': [
+      'warn',
+      {
+        'script': {
+          'lang': 'ts',
+        },
+      },
+    ],
+    'vue/multi-word-component-names'    : 'off',
+    'vue/no-multiple-template-root'     : 'off',
+    'vue/no-v-for-template-key'         : 'off',
+    'vue/no-v-for-template-key-on-child': 'warn',
+    'vue/require-slots-as-functions'    : 'error',
+    'vue/v-on-event-hyphenation'        : [
+      'warn',
+      'never',
+      {
+        'autofix': true,
+      },
+    ],
+  },
 };

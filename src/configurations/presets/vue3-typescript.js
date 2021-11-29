@@ -1,13 +1,21 @@
-const vue3Config = require('./vue3');
-const vueTypescriptConfig = require('./vue-typescript');
+const {getPreset, getPartial} = require('../../getConfiguration');
 
 module.exports = {
-  ...vue3Config,
-  ...vueTypescriptConfig,
-
+  'extends': [
+    getPreset('vue3'),
+    getPartial('typescript'),
+  ],
+  'parserOptions': {
+    'parser'             : '@typescript-eslint/parser',
+    'project'            : 'tsconfig.json',
+    'extraFileExtensions': [
+      '.vue',
+    ],
+    'ecmaFeatures': {
+      'jsx': true,
+    },
+  },
   'rules': {
-    ...vue3Config.rules,
-    ...vueTypescriptConfig.rules,
     'vue/require-direct-export': 'off',
     'vue/valid-template-root'  : 'off',
   },

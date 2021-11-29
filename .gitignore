@@ -1,5 +1,6 @@
 .idea
 node_modules
 coverage
-/preset-*.js
+/partial-*.js
 /plugin-*.js
+/preset-*.js

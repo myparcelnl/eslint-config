@@ -14,7 +14,8 @@
     "no-magic-numbers": "off"
   },
   "ignorePatterns": [
-    "preset-*.js",
-    "plugin-*.js"
+    "partial-*.js",
+    "plugin-*.js",
+    "preset-*.js"
   ]
 }

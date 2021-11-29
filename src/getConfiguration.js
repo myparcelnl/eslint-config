@@ -19,8 +19,8 @@ function get(type, name) {
  * @param {string} name
  * @returns {string}
  */
-function getPreset(name) {
-  return get('preset', name);
+function getPartial(name) {
+  return get('partial', name);
 }
 
 /**
@@ -31,7 +31,16 @@ function getPlugin(name) {
   return get('plugin', name);
 }
 
+/**
+ * @param {string} name
+ * @returns {string}
+ */
+function getPreset(name) {
+  return get('preset', name);
+}
+
 module.exports = {
-  getPreset,
+  getPartial,
   getPlugin,
+  getPreset,
 };

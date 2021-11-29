@@ -1,31 +1,21 @@
-const vueConfig = require('./vue');
-const typeScriptConfig = require('./typescript');
+const {getPartial, getPreset} = require('../../getConfiguration');
 
 module.exports = {
-  ...typeScriptConfig,
-  ...vueConfig,
-  'parser': '@typescript-eslint/parser',
-
+  'extends': [
+    getPreset('typescript'),
+    getPartial('vue'),
+  ],
   'parserOptions': {
-    ...vueConfig.parserOptions,
-    ...typeScriptConfig.parserOptions,
-    'ecmaFeatures': {
-      'jsx': true,
-    },
-    'ecmaVersion'        : 11,
+    'parser'             : '@typescript-eslint/parser',
+    'project'            : 'tsconfig.json',
     'extraFileExtensions': [
       '.vue',
     ],
-    'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true,
+    },
   },
-
-  'plugins': [
-    ...vueConfig.plugins,
-    ...typeScriptConfig.plugins,
-  ],
-
   'rules': {
-    ...vueConfig.rules,
-    ...typeScriptConfig.rules,
+    'vue/block-lang': 'off',
   },
 };
