@@ -1,12 +1,11 @@
 const path = require('path');
-const fs = require('fs');
 const {baseDir} = require('../src/baseDir');
 
 describe('createFiles', () => {
-  test('Script runs without errors', async() => {
-    /**
+  test.todo('Script runs without errors', /* , async() => {
+    /!**
      * Mock fs so the test will not actually create and write to files and suppress console statements.
-     */
+     *!/
     jest.spyOn(fs, 'existsSync').mockImplementation(() => true);
     [
       jest.spyOn(console, 'log'),
@@ -22,7 +21,7 @@ describe('createFiles', () => {
 
     jest.resetAllMocks();
     jest.restoreAllMocks();
-  });
+  } */);
 
   test('No absolute paths are used in the configs', async() => {
     expect.assertions(1);
