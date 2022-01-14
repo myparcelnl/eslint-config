@@ -46,7 +46,6 @@
     "@myparcel/semantic-release-config": "^1.2.3",
     "@types/jest": "^27.0.3",
     "babel-jest": "^27.4.0",
-    "coveralls": "^3.1.1",
     "jest": "^27.4.0",
     "jest-runner-eslint": "^1.0.0",
     "vue-jest": "^3.0.7",
