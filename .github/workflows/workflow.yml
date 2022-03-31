@@ -15,12 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - run: npm ci
+      - uses: myparcelnl/actions/yarn-install@v1
 
       - name: Build package
         run: npm run build
@@ -28,12 +23,12 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Update coverage
-        uses: codecov/codecov-action@v1
+      - uses: myparcelnl/actions/update-coverage@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
-      - name: Run semantic release
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        run: npx semantic-release
+      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: myparcelnl/actions/semantic-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_REPO_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
