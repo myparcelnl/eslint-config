@@ -22,7 +22,7 @@ module.exports = {
     'jest/no-duplicate-hooks'           : 'warn',
     'jest/no-export'                    : 'off',
     'jest/no-focused-tests'             : 'warn',
-    'jest/no-hooks'                     : 'warn',
+    'jest/no-hooks'                     : 'off',
     'jest/no-identical-title'           : 'warn',
     'jest/no-if'                        : 'off',
     'jest/no-interpolation-in-snapshots': 'warn',
