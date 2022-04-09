@@ -191,7 +191,7 @@ module.exports = {
         'variableDeclarationIgnoreFunction': true,
       },
     ],
-    '@typescript-eslint/unbound-method'    : 'warn',
+    '@typescript-eslint/unbound-method'    : 'off',
     '@typescript-eslint/unified-signatures': 'warn',
 
     // New rules, to be implemented.
