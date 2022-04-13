@@ -111,13 +111,13 @@ module.exports = {
       {
         'selector': 'default',
         'format'  : [
-          'camelCase',
+          'strictCamelCase',
         ],
       },
       {
         'selector': 'variable',
         'format'  : [
-          'camelCase',
+          'strictCamelCase',
           'UPPER_CASE',
         ],
       },
@@ -129,9 +129,31 @@ module.exports = {
         ],
       },
       {
+        'selector': [
+          'classProperty',
+          'objectLiteralProperty',
+          'typeProperty',
+          'classMethod',
+          'objectLiteralMethod',
+          'typeMethod',
+          'accessor',
+          'enumMember',
+        ],
+        'format'   : null,
+        'modifiers': [
+          'requiresQuotes',
+        ],
+      },
+      {
+        'selector': [
+          'objectLiteralProperty',
+        ],
+        'format': null,
+      },
+      {
         'selector': 'typeLike',
         'format'  : [
-          'PascalCase',
+          'StrictPascalCase',
         ],
       },
       {
@@ -139,6 +161,16 @@ module.exports = {
         'format'  : [
           'UPPER_CASE',
         ],
+      },
+      {
+        'selector' : 'property',
+        'modifiers': [
+          'private',
+        ],
+        'format': [
+          'strictCamelCase',
+        ],
+        'leadingUnderscore': 'allow',
       },
     ],
     '@typescript-eslint/no-dynamic-delete'                  : 'warn',
