@@ -1,22 +1,33 @@
 {
   "name": "@myparcel/eslint-config",
-  "author": "Edie Lemoine (edie@myparcel.nl)",
-  "license": "GPL-3.0",
   "version": "2.0.0",
   "description": "ESLint configurations for various types of projects.",
-  "scripts": {
-    "build": "node src/createFiles.js",
-    "lint": "eslint --fix src/**/*.js",
-    "test": "jest --coverage",
-    "release": "semantic-release",
-    "link": "npm run build && npm link",
-    "watch": "watch 'npm run build' src"
+  "keywords": [
+    "eslint"
+  ],
+  "homepage": "https://github.com/myparcelnl/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/myparcelnl/eslint-config/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myparcelnl/eslint-config.git"
+  },
+  "license": "MIT",
+  "author": "Edie Lemoine <edie@myparcel.nl>",
   "main": "index.js",
   "files": [
     "tsconfig.json",
     "{partial,plugin,preset}-*.js"
   ],
+  "scripts": {
+    "build": "node src/createFiles.js",
+    "link": "npm run build && npm link",
+    "lint": "eslint --fix src/**/*.js",
+    "release": "semantic-release",
+    "test": "jest --coverage",
+    "watch": "watch 'npm run build' src"
+  },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
@@ -50,16 +61,5 @@
     "jest-runner-eslint": "^1.0.0",
     "vue-jest": "^3.0.7",
     "watch": "^1.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/myparcelnl/eslint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/myparcelnl/eslint-config/issues"
-  },
-  "homepage": "https://github.com/myparcelnl/eslint-config#readme",
-  "keywords": [
-    "eslint"
-  ]
+  }
 }
