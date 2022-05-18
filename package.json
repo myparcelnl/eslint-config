@@ -54,7 +54,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
-    "@myparcel/semantic-release-config": "^2.0.0",
+    "@myparcel/semantic-release-config": "^3.0.0",
     "@types/jest": "^27.5.1",
     "babel-jest": "^28.1.0",
     "jest": "^28.1.0",
