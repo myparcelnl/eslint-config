@@ -7,8 +7,12 @@ module.exports = {
     'tailwindcss',
   ],
   'rules': {
-    'tailwindcss/classnames-order'          : 'warn',
-    'tailwindcss/no-custom-classname'       : 'warn',
-    'tailwindcss/no-contradicting-classname': 'warn',
+    'tailwindcss/classnames-order'                  : 'warn',
+    'tailwindcss/enforces-negative-arbitrary-values': 'warn',
+    'tailwindcss/enforces-shorthand'                : 'warn',
+    'tailwindcss/migration-from-tailwind-2'         : 'off',
+    'tailwindcss/no-arbitrary-value'                : 'off',
+    'tailwindcss/no-contradicting-classname'        : 'warn',
+    'tailwindcss/no-custom-classname'               : 'warn',
   },
 };
