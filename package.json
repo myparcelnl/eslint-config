@@ -26,7 +26,7 @@
     "lint": "eslint --fix src/**/*.js",
     "release": "semantic-release",
     "test": "jest --coverage",
-    "watch": "watch 'npm run build' src"
+    "watch": "nodemon --watch src --ext js --exec 'npm run build'"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
@@ -59,7 +59,7 @@
     "babel-jest": "^28.1.0",
     "jest": "^28.1.0",
     "jest-runner-eslint": "^1.0.1",
-    "vue-jest": "^3.0.7",
-    "watch": "^1.0.2"
+    "nodemon": "^2.0.16",
+    "vue-jest": "^3.0.7"
   }
 }
