@@ -105,7 +105,6 @@ module.exports = {
     '@typescript-eslint/explicit-member-accessibility' : 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'warn',
     '@typescript-eslint/member-delimiter-style'        : 'warn',
-    '@typescript-eslint/member-ordering'               : 'warn',
     '@typescript-eslint/naming-convention'             : [
       'warn',
       {
@@ -171,6 +170,25 @@ module.exports = {
           'strictCamelCase',
         ],
         'leadingUnderscore': 'allow',
+      },
+    ],
+    '@typescript-eslint/member-ordering': [
+      'warn',
+      {
+        'default': [
+          'public-field',
+          'protected-field',
+          'private-field',
+          'public-get',
+          'protected-get',
+          'private-get',
+          'public-set',
+          'protected-set',
+          'private-set',
+          'public-method',
+          'protected-method',
+          'private-method',
+        ],
       },
     ],
     '@typescript-eslint/no-dynamic-delete'                  : 'warn',
