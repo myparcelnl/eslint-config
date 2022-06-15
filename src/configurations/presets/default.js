@@ -501,7 +501,7 @@ module.exports = {
       'warn',
       'always',
     ],
-    'class-methods-use-this'        : 'warn',
+    'class-methods-use-this'        : 'off',
     'default-case-last'             : 'warn',
     'default-param-last'            : 'warn',
     'function-call-argument-newline': [
