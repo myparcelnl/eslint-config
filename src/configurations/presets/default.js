@@ -361,7 +361,7 @@ module.exports = {
     'no-useless-concat'               : 'warn',
     'no-useless-escape'               : 'warn',
     'no-useless-return'               : 'warn',
-    'no-void'                         : 'warn',
+    'no-void'                         : 'off',
     'no-warning-comments'             : 'off',
     'no-whitespace-before-property'   : 'warn',
     'no-with'                         : 'warn',
