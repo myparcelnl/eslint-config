@@ -411,14 +411,46 @@ module.exports = {
     'padding-line-between-statements': [
       'warn',
       /* eslint-disable object-property-newline,object-curly-newline */
-      {'blankLine': 'always', 'prev': '*', 'next': 'cjs-export'},
-      {'blankLine': 'always', 'prev': 'cjs-import', 'next': '*'},
-      {'blankLine': 'always', 'prev': 'export', 'next': '*'},
-      {'blankLine': 'always', 'prev': 'import', 'next': '*'},
-      {'blankLine': 'any', 'prev': 'cjs-export', 'next': 'cjs-export'},
-      {'blankLine': 'never', 'prev': 'cjs-import', 'next': 'cjs-import'},
-      {'blankLine': 'any', 'prev': 'export', 'next': 'export'},
-      {'blankLine': 'never', 'prev': 'import', 'next': 'import'},
+      {
+        'blankLine': 'always',
+        'prev'     : '*',
+        'next'     : 'cjs-export',
+      },
+      {
+        'blankLine': 'always',
+        'prev'     : 'cjs-import',
+        'next'     : '*',
+      },
+      {
+        'blankLine': 'always',
+        'prev'     : 'export',
+        'next'     : '*',
+      },
+      {
+        'blankLine': 'always',
+        'prev'     : 'import',
+        'next'     : '*',
+      },
+      {
+        'blankLine': 'any',
+        'prev'     : 'cjs-export',
+        'next'     : 'cjs-export',
+      },
+      {
+        'blankLine': 'never',
+        'prev'     : 'cjs-import',
+        'next'     : 'cjs-import',
+      },
+      {
+        'blankLine': 'any',
+        'prev'     : 'export',
+        'next'     : 'export',
+      },
+      {
+        'blankLine': 'never',
+        'prev'     : 'import',
+        'next'     : 'import',
+      },
       /* eslint-enable object-property-newline,object-curly-newline */
     ],
     'prefer-named-capture-group'  : 'off',
@@ -469,6 +501,9 @@ module.exports = {
         'block': {
           'balanced': true,
         },
+        'markers': [
+          '/',
+        ],
       },
     ],
     'strict'              : 'off',
