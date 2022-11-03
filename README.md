@@ -1,3 +1,7 @@
+> **Note:**
+> 
+> ⚠️ This package is deprecated. Please switch to [@myparcel-eslint] for much fewer dependencies.
+
 # MyParcel ESLint configuration
 
 This package contains multiple ESLint presets for different types of projects.
@@ -150,3 +154,5 @@ See [contributing.md](CONTRIBUTING.md).
 [typescript-eslint/eslint-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
 [typescript-eslint/eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
 [typescript-eslint]: https://github.com/typescript-eslint/typescript-eslint
+
+[@myparcel-eslint]: https://github.com/myparcelnl/eslint
