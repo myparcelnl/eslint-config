@@ -9,7 +9,7 @@ Additional information, documentation and guides on ESLint can be found
 on https://eslint.org/
 
 ![ESLint version](https://img.shields.io/github/package-json/dependency-version/myparcelnl/eslint-config/eslint)
-![Version on NPM](https://img.shields.io/npm/v/@myparcel/eslint-config)
+![Version on NPM](https://img.shields.io/npm/v/@myparcel-dev/eslint-config)
 [![Coverage](https://codecov.io/gh/myparcelnl/eslint-config/branch/master/graph/badge.svg?token=ZBVEA5KZGN)](https://codecov.io/gh/myparcelnl/eslint-config)
 
 ## Usage
@@ -17,7 +17,7 @@ on https://eslint.org/
 Install the package via npm:
 
 ```
-$ npm i -D @myparcel/eslint-config
+$ npm i -D @myparcel-dev/eslint-config
 ```
 
 Create an [ESLint config file], if you haven't already, and add the following: (
@@ -26,8 +26,8 @@ JavaScript example)
 ```js
 module.exports = {
   extends: [
-    // Base config, same as '@myparcel/eslint-config/preset-default',
-    '@myparcel/eslint-config',
+    // Base config, same as '@myparcel-dev/eslint-config/preset-default',
+    '@myparcel-dev/eslint-config',
   ],
 };
 ```
@@ -38,8 +38,8 @@ Or to use another preset with an extra plugin:
 module.exports = {
   extends: [
     // Vue.js config
-    '@myparcel/eslint-config/preset-vue',
-    '@myparcel/eslint-config/plugin-you-dont-need-momentjs',
+    '@myparcel-dev/eslint-config/preset-vue',
+    '@myparcel-dev/eslint-config/plugin-you-dont-need-momentjs',
   ],
 };
 ```    
@@ -63,7 +63,7 @@ project configuration. If it's truly project specific you don't have to do this.
 
 ### Base config
 
-> `@myparcel/eslint-config(/preset-default)`
+> `@myparcel-dev/eslint-config(/preset-default)`
 
 This config contains the bare bones setup. It extends plugin configs that should
 be used in every project and contains all base rules. All other presets should
@@ -71,14 +71,14 @@ extend this one.
 
 ### ES5
 
-> `@myparcel/eslint-config/preset-es5`
+> `@myparcel-dev/eslint-config/preset-es5`
 
 This config is made for any project using ES5 JavaScript. The environment `es5`
 is set and it extends the base config.
 
 ### ES6
 
-> `@myparcel/eslint-config/preset-es6`
+> `@myparcel-dev/eslint-config/preset-es6`
 
 This config is made as a base for any project using modern JavaScript. It's
 meant to always use the latest ECMAScript version. The environment `es6` is set
@@ -86,7 +86,7 @@ and it extends the base config.
 
 ### Meteor
 
-> `@myparcel/eslint-config/preset-meteor`
+> `@myparcel-dev/eslint-config/preset-meteor`
 
 This config is made for [Meteor] projects. In addition to the base config it
 extends `eslint:recommended` and `plugin:meteor/recommended`. The
@@ -95,7 +95,7 @@ Meteor modules.
 
 ### Vue
 
-> `@myparcel/eslint-config/preset-vue`
+> `@myparcel-dev/eslint-config/preset-vue`
 
 This config is made for [Vue.js] projects. In addition to the base config it
 extends `plugin:vue/recommended`. It supports linting `.vue` files by
@@ -103,7 +103,7 @@ using [eslint-plugin-vue].
 
 ### TypeScript
 
-> `@myparcel/eslint-config/preset-typescript`
+> `@myparcel-dev/eslint-config/preset-typescript`
 
 This config is made for [TypeScript] projects. You need to have
 a `tsconfig.json` in your project root to use this preset.
@@ -116,21 +116,21 @@ not to be used on their own. They are named `plugin-<name>.js`.
 
 ### JSDoc
 
-> `@myparcel/eslint-config/plugin-jsdoc`
+> `@myparcel-dev/eslint-config/plugin-jsdoc`
 
 Extended by the base config. Contains [eslint-plugin-jsdoc] and applies its
 custom rules for [JSDoc] comments.
 
 ### Jest
 
-> `@myparcel/eslint-config/plugin-jest`
+> `@myparcel-dev/eslint-config/plugin-jest`
 
 Extend this config in any project using [Jest]. Contains rules
 from [eslint-plugin-jest].
 
 ### You Don't Need MomentJS
 
-> `@myparcel/eslint-config/plugin-you-dont-need-momentjs`
+> `@myparcel-dev/eslint-config/plugin-you-dont-need-momentjs`
 
 Contains [eslint-plugin-you-dont-need-momentjs] and applies its custom rules.
 

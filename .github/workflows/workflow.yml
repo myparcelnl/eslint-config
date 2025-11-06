@@ -1,23 +1,30 @@
-name: Create release and publish to NPM
+name: Release
 
 on:
-  pull_request: ~
   push:
     branches:
       - main
-    paths:
-      - src/**/*
-      - package.json
-      - package-lock.json
 
-  workflow_dispatch: ~
+  pull_request:
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  process:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: myparcelnl/actions/yarn-install@v1
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build package
         run: npm run build
@@ -29,8 +36,39 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        uses: myparcelnl/actions/semantic-release@v1
+  release:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Git credentials
+        id: credentials
+        uses: myparcelnl/actions/setup-git-credentials@v4
+        with:
+          app-id: ${{ secrets.MYPARCEL_APP_ID }}
+          private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.credentials.outputs.token }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build
+
+      - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_REPO_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.credentials.outputs.token }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_NEW }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_NEW }}
+        run: npx semantic-release
