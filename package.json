@@ -23,6 +23,7 @@
   "resolutions": {
     "tar": "7.5.11"
   },
+  "packageManager": "yarn@4.12.0",
   "scripts": {
     "build": "node src/createFiles.js",
     "link": "npm run build && npm link",
