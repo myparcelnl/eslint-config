@@ -16,16 +16,20 @@ jobs:
   process:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: myparcelnl/actions/yarn-install@v1
+      - uses: actions/checkout@v4
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: myparcelnl/actions/yarn-install@v4
 
       - name: Build package
-        run: npm run build
+        run: yarn build
 
       - name: Run tests
-        run: npm test
+        run: yarn test
 
-      - uses: myparcelnl/actions/update-coverage@v1
+      - uses: myparcelnl/actions/update-coverage@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
