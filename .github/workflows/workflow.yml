@@ -24,10 +24,10 @@ jobs:
       - uses: myparcelnl/actions/yarn-install@v4
 
       - name: Build package
-        run: npm run build
+        run: yarn build
 
       - name: Run tests
-        run: npm test
+        run: yarn test
 
       - uses: myparcelnl/actions/update-coverage@v4
         with:
